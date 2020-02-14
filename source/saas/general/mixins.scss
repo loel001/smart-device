@@ -1,0 +1,53 @@
+@mixin list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin content {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin size-radius($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin size-radius($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin pt-mono($value) {
+  font-family: "PT-Mono", "Arial", sans-serif;
+   font-weight: $value;
+   font-style: normal;
+}
+
+@mixin roboto-condensed($value) {
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-weight: $value;
+  font-style: normal;
+}
+
+@mixin icon {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+@mixin wrapper {
+  @media $mobile-width {
+    min-width: 320px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media $tablet-width {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
