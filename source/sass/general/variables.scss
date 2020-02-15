@@ -7,7 +7,13 @@ $color-fifth: #788891;
 $color-sixth: #203c42;
 
 //остальное
-//$mobile-width: ~"(max-width: 767px)";
-//$tablet-width: ~"(max-width: 1023px)";
-//$retina-dpi: 144dpi;
-//$retina-dppx: 1.5dppx;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$breakpoints: (
+  "mobile": 768px,
+  "tablet": 1024px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px
+);

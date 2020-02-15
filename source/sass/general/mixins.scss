@@ -21,16 +21,44 @@
   border-radius: $radius;
 }
 
-@mixin pt-mono($value) {
+@mixin pt-mono($size: false, $colour: false, $weight: false,  $lh: false) {
   font-family: "PT-Mono", "Arial", sans-serif;
-  font-weight: $value;
-  font-style: normal;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $colour {
+    color: $colour;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
 }
 
-@mixin roboto-condensed($value) {
+@mixin roboto-condensed($size: false, $colour: false, $weight: false,  $lh: false) {
   font-family: "Roboto-Condensed", "Arial", sans-serif;
-  font-weight: $value;
-  font-style: normal;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $colour {
+    color: $colour;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
 }
 
 @mixin icon {
@@ -39,15 +67,41 @@
   content: "";
 }
 
-//@mixin wrapper {
-//  @media $mobile-width {
-//    min-width: 320px;
-//    padding-right: 20px;
-//    padding-left: 20px;
-//  }
-//
-//  @media $tablet-width {
-//    padding-right: 60px;
-//    padding-left: 60px;
-//  }
-//}
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+@mixin wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @include mq("mobile") {
+    min-width: 320px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include mq("tablet") {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
