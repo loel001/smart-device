@@ -1,0 +1,269 @@
+.about-company {
+  width: 100%;
+  background-color: $color-first;
+}
+
+.about-company__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 375px;
+  padding-right: 375px;
+  padding-top: 114px;
+  padding-bottom: 110px;
+
+  @include respond-above (1599px) {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  @include respond-above (1247px) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include respond-above (1023px) {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 55px;
+    padding-bottom: 83px;
+  }
+
+  @include respond-above (767px) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 37px;
+    padding-bottom: 65px;
+  }
+}
+
+.about-company__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 110px;
+
+  @include respond-above($breakpoints-tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    display: block;
+    margin-bottom: 55px;
+  }
+}
+
+.about-company__advantage {
+  display: block;
+  border-left: 3px solid $color-second;
+  border-right: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 40px;
+  padding-left: 45px;
+  padding-right: 40px;
+  padding-bottom: 65px;
+  cursor: pointer;
+  width: 49%;
+
+  @include respond-above($breakpoints-tablet) {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    width: 48%;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    width: 100%;
+  }
+
+  &:nth-child(1) {
+    @include respond-above($breakpoints-mobile) {
+      padding-bottom: 35px;
+    }
+  }
+
+  &:nth-child(2) {
+    @include respond-above($breakpoints-mobile) {
+      padding-right: 7px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &:nth-child(3) {
+    @include respond-above($breakpoints-tablet) {
+      padding-right: 15px;
+    }
+
+    @include respond-above($breakpoints-mobile) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &:nth-child(4) {
+    @include respond-above($breakpoints-mobile) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-second;
+  }
+
+  &:hover .about-company__icon svg {
+    fill: $color-first;
+  }
+
+  &:hover > h2 {
+    color: $color-first;
+  }
+
+  &:hover > p {
+    color: $color-first;
+  }
+}
+
+.about-company__advantage:not(:last-child):not(:nth-last-child(2)) {
+  margin-bottom: 30px;
+
+  @include respond-above($breakpoints-mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.about-company__advantage:not(:last-child) {
+  @include respond-above($breakpoints-mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.about-company__icon {
+  display: block;
+  margin-bottom: 20px;
+
+  @include respond-above($breakpoints-tablet) {
+    margin-bottom: 10px;
+  }
+}
+
+.about-company__icon svg {
+  fill: $color-second;
+}
+
+.about-company__advantage h2 {
+  @include content;
+  @include roboto-condensed(24px, $color-second, 400);
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+
+  @include respond-above($breakpoints-mobile) {
+    font-size: 20px;
+  }
+}
+
+.about-company__advantage p {
+  @include content;
+  @include pt-mono(16px, $color-third, 400);
+  line-height: 144%;
+  min-height: 90px;
+
+  @include respond-above($breakpoints-tablet) {
+    min-height: auto;
+  }
+}
+
+.about-company__information {
+  padding-left: 180px;
+
+  @include respond-above($breakpoints-tablet) {
+    padding-left: 187px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    padding-left: 0;
+  }
+}
+
+.about-company__information h2 {
+  @include content;
+  @include roboto-condensed(36px, $color-third, 400);
+  margin-bottom: 30px;
+
+  @include respond-above($breakpoints-tablet) {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    font-size: 28px;
+    margin-bottom: 27px;
+  }
+}
+
+.about-company__information p {
+  @include content;
+  @include pt-mono(16px, $color-third, 400);
+  line-height: 134%;
+  padding-right: 31px;
+
+  @include respond-above($breakpoints-mobile) {
+    padding-right: 0;
+  }
+}
+
+.about-company__information p span {
+  display: inline;
+
+  @include respond-above($breakpoints-tablet) {
+    display: none;
+  }
+}
+
+.about-company__information p span:nth-child(2) {
+  display: none;
+
+  @include respond-above($breakpoints-tablet) {
+    display: inline;
+  }
+}
+
+.about-company__information p:not(:nth-last-of-type(1)) {
+  margin-bottom: 20px;
+
+  @include respond-above($breakpoints-mobile) {
+    margin-bottom: 45px;
+  }
+}
+
+.about-company__information a {
+  border-radius: 5px;
+  border: 1px solid $color-second;
+  width: 180px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include roboto-condensed(14px, $color-second, 700);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+
+  @include respond-above($breakpoints-tablet) {
+    margin-top: 43px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    margin-top: 33px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

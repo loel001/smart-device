@@ -1,0 +1,241 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+  width: 202px;
+  height: 52px;
+
+  @include respond-above($breakpoints-mobile) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.navigation__logo img:first-child {
+  display: none;
+
+  @include respond-above($breakpoints-mobile) {
+    display: block;
+  }
+}
+
+.navigation__logo img:nth-child(2) {
+  display: block;
+
+  @include respond-above($breakpoints-mobile) {
+    display: none;
+  }
+}
+
+.navigation__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1092px;
+  justify-content: space-between;
+
+  @include respond-above($breakpoints-desktop-wide) {
+    width: 73%;
+  }
+
+  @include respond-above($breakpoints-tablet) {
+    width: 158px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    width: 136px;
+  }
+}
+
+.navigation__open {
+  display: block;
+  border: none;
+  width: 37px;
+  height: 52px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+
+  &::before {
+    @include pseudo(block, absolute);
+    content: "";
+    width: 37px;
+    height: 13px;
+    border-top: 1px solid $color-first;
+    border-bottom: 1px solid $color-first;
+    left: 0;
+    top: 20px;
+
+    @include respond-above($breakpoints-tablet) {
+      top: 17px;
+    }
+
+    @include respond-above($breakpoints-mobile) {
+      top: 10px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    height: 38px;
+  }
+}
+
+.navigation__email {
+  @include pt-mono(16px, $color-first, 400);
+  position: relative;
+  cursor: pointer;
+  padding-left: 40px;
+  line-height: 52px;
+  margin-right: 35px;
+
+  @include respond-above($breakpoints-desktop-wide) {
+    padding-left: 30px;
+    margin-right: 0;
+  }
+
+  @include respond-above($breakpoints-tablet) {
+    font-size: 0;
+    width: 26px;
+    padding-left: 0;
+    line-height: 38px;
+  }
+
+  &::before {
+    @include pseudo(block, absolute);
+    @include icon;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 14px;
+    background-image: url("../img/envelope.svg");
+    background-size: 18px 18px;
+
+    @include respond-above($breakpoints-tablet) {
+      width: 26px;
+      height: 19px;
+      background-size: 26px 19px;
+      padding-left: 0;
+    }
+
+    @include respond-above($breakpoints-mobile) {
+      top: 7px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.navigation__phone-number {
+  @include pt-mono(16px, $color-first, 400);
+  position: relative;
+  cursor: pointer;
+  line-height: 52px;
+  padding-left: 40px;
+
+  @include respond-above($breakpoints-desktop-wide) {
+    padding-left: 30px;
+  }
+
+  @include respond-above($breakpoints-tablet) {
+    font-size: 0;
+    width: 24px;
+    padding-left: 0;
+    line-height: 38px;
+  }
+
+  &::before {
+    @include pseudo(block, absolute);
+    @include icon;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 15px;
+    background-image: url("../img/phone-call.svg");
+    background-size: 18px 18px;
+
+    @include respond-above($breakpoints-tablet) {
+      width: 24px;
+      height: 24px;
+      background-size: 24px 24px;
+      top: 10px;
+    }
+
+    @include respond-above($breakpoints-mobile) {
+      top: 5px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.navigation__button {
+  display: block;
+  border: 1px solid $color-first;
+  border-radius: 5px;
+  width: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  @include roboto-condensed(14px, $color-first, 700);
+  cursor: pointer;
+
+
+  @include respond-above($breakpoints-tablet) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.navigation__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 662px;
+
+  @include respond-above($breakpoints-desktop-wide) {
+    width: 85%;
+  }
+
+  @include respond-above($breakpoints-tablet) {
+    width: 83px;
+  }
+
+  @include respond-above($breakpoints-mobile) {
+    width: 73px;
+  }
+}

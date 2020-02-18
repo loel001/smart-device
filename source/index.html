@@ -16,14 +16,247 @@
   <include src="build/img/sprite_auto.svg"></include>
 </div>
 <header class="page-header">
-
+  <div class="page-header__wrapper">
+    <nav class="page-header__navigation navigation">
+      <a class="navigation__logo">
+        <img width="38" height="38" src="img/logo-mobile.svg" alt="Логотип Smart Device">
+        <img width="202" height="52" src="img/logo.svg" alt="Логотип Smart Device">
+      </a>
+      <div class="navigation__wrapper">
+        <button class="navigation__open" type="button" aria-label="Открыть меню"></button>
+        <div class="navigation__content">
+          <a class="navigation__email" href="mailto:info@sd.ru" aria-label="info@sd.ru">
+            info@sd.ru
+          </a>
+          <a class="navigation__phone-number" href="tel:+74950005252" aria-label="+74950005252">+7 (495) 000 52 52</a>
+          <button class="navigation__button" type="button">Заказать звонок</button>
+        </div>
+      </div>
+    </nav>
+    <div class="page-header__container">
+      <h2>Печатные платы</h2>
+      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button type="button">
+        <span>Получить бесплатную консультацию</span>
+        <span>Бесплатная консультация</span>
+      </button>
+    </div>
+    <button type="button" class="page-header__scroll">Скролл вниз</button>
+  </div>
 </header>
 <main>
   <h1 class="visually-hidden">Smart Device - умные технологии</h1>
+  <section class="about-company">
+    <div class="about-company__wrapper">
+      <div class="about-company__content">
+        <div class="about-company__advantage">
+          <div class="about-company__icon">
+            <svg width="29" height="35">
+              <use xlink:href="#icon-stopwatch">
+            </svg>
+          </div>
+          <h2>Оперативные сроки</h2>
+          <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
+            заказы плат и комплектующих в самые короткие сроки.</p>
+        </div>
+        <div class="about-company__advantage">
+          <div class="about-company__icon">
+            <svg width="35" height="35">
+              <use xlink:href="#icon-hired">
+            </svg>
+          </div>
+          <h2>Крупные поставщики</h2>
+          <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+            Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+        </div>
+        <div class="about-company__advantage">
+          <div class="about-company__icon">
+            <svg width="36" height="31">
+              <use xlink:href="#icon-detective">
+            </svg>
+          </div>
+          <h2>Полная конфиденциальность</h2>
+          <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+        </div>
+        <div class="about-company__advantage">
+          <div class="about-company__icon">
+            <svg width="35" height="35">
+              <use xlink:href="#icon-tag">
+            </svg>
+          </div>
+          <h2>Персонализация стоимости</h2>
+          <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+            устраивает.</p>
+        </div>
+      </div>
+      <div class="about-company__information">
+        <h2>О компании</h2>
+        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
+          года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p>Наши поставщики - мировые производители электронных
+          компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на
+          предприятиях Российских Железных Дорог<span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
+          наших клиентов крупнейшие Производители светотехники России.</span><span>..</span></p>
+        <a href="#">Подробнее</a>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="services__wrapper">
+      <h2>Service Device предлагает следующие товары и услуги</h2>
+      <div class="services__container">
+        <a class="services__link" href="#">
+          <h3>Производство печатных плат</h3>
+          <button type="button" aria-label="Подробнее"></button>
+        </a>
+        <a class="services__link" href="#">
+          <h3>Монтаж печатных плат</h3>
+          <button type="button" aria-label="Подробнее"></button>
+        </a>
+        <a class="services__link" href="#">
+          <h3>Комплектующие для светотехники</h3>
+          <button type="button" aria-label="Подробнее"></button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="write-to-us" action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <label for="name" class="visually-hidden">Ваше имя</label>
+          <input id="name" type="text" name="name" placeholder="Имя">
+        </div>
+        <div>
+          <label for="telephone-number" class="visually-hidden">Телефон</label>
+          <input id="telephone-number" type="number" name="telephone" placeholder="Телефон">
+        </div>
+        <div>
+          <label for="question" class="visually-hidden">Текст письма</label>
+          <textarea id="question" name="question" rows="7" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+        <div>
+          <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="processing-agreement" checked="">
+          <label for="processing-agreement">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </section>
 
 </main>
 <footer class="page-footer">
-
+  <div>
+    <div>
+      <h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <form class="write-to-us" action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <div>
+            <label for="appointment-name" class="visually-hidden">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" placeholder="Имя">
+          </div>
+          <div>
+            <label for="telephone" class="visually-hidden">Телефон</label>
+            <input id="telephone" type="number" name="telephone" placeholder="Телефон">
+          </div>
+        </div>
+        <div>
+          <label for="appointment-text" class="visually-hidden">Текст письма</label>
+          <textarea id="appointment-text" name="letter" rows="7" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <div>
+          <button type="submit">Задать вопрос</button>
+          <div>
+            <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="agreement" checked="">
+            <label for="agreement">Я согласен на обработку персональных данных</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div>
+    <div>
+      <a class="page-footer__logo">
+        <img width="216" height="52" src="img/logo-footer.svg" alt="Логотип Smart Device">
+      </a>
+      <span>1999-2018 SD Service Devices</span>
+      <ul class="page-footer__links social">
+        <li class="social__button">
+          <a class="social__link" href="#">
+            <img width="27" height="27" src="img/facebook.svg" alt="Фейсбук">
+            <span class="visually-hidden">
+              Фейсбук
+            </span>
+          </a>
+        </li>
+        <li class="social__button">
+          <a class="social__link" href="#">
+            <img width="27" height="27" src="img/ok.svg" alt="Одноклассники">
+            <span class="visually-hidden">
+              Одноклассники
+            </span>
+          </a>
+        </li>
+        <li class="social__button">
+          <a class="social__link" href="#">
+            <img width="27" height="27" src="img/vk.svg" alt="Вконтакте">
+            <span class="visually-hidden">
+              Вконтакте
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div>
+        <span>Разделы сайта</span>
+        <ul>
+          <li>
+            <a href="#">О компании</a>
+          </li>
+          <li>
+            <a href="#">Продукты</a>
+          </li>
+          <li>
+            <a href="#">Производство печатных плат</a>
+          </li>
+          <li>
+            <a href="#">Монтаж печатных плат</a>
+          </li>
+          <li>
+            <a href="#">Комплектующие</a>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Крнтакты</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <address>г. Мытищи, Олимпийский проспект, д.10</address>
+        <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+        <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+        <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <ul>
+        <li>Все права защищены</li>
+        <li>1999-2018 SD Service Devices</li>
+        <li>Условия конфиденциальности</li>
+        <li>Developed by wow studio</li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <!--<script src="js/main.js"></script>-->
 </body>

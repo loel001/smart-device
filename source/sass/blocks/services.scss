@@ -1,0 +1,37 @@
+.services {
+  width: 100%;
+  background-color: $color-fourth;
+}
+
+.services__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 375px;
+  padding-right: 375px;
+  padding-top: 90px;
+  padding-bottom: 127px;
+
+  @include respond-above (1599px) {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  @include respond-above (1247px) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include respond-above (1023px) {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 50px;
+    padding-bottom: 78px;
+  }
+
+  @include respond-above (767px) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 65px;
+  }
+}

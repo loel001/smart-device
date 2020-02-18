@@ -9,19 +9,13 @@
   padding: 0;
 }
 
-@mixin size-radius($width, $height, $radius) {
+@mixin size-radius ($width, $height, $radius) {
   width: $width;
   height: $height;
   border-radius: $radius;
 }
 
-@mixin size-radius($width, $height, $radius) {
-  width: $width;
-  height: $height;
-  border-radius: $radius;
-}
-
-@mixin pt-mono($size: false, $colour: false, $weight: false,  $lh: false) {
+@mixin pt-mono ($size: false, $colour: false, $weight: false,  $lh: false) {
   font-family: "PT-Mono", "Arial", sans-serif;
 
   @if $size {
@@ -41,7 +35,7 @@
   }
 }
 
-@mixin roboto-condensed($size: false, $colour: false, $weight: false,  $lh: false) {
+@mixin roboto-condensed ($size: false, $colour: false, $weight: false,  $lh: false) {
   font-family: "Roboto-Condensed", "Arial", sans-serif;
 
   @if $size {
@@ -67,41 +61,41 @@
   content: "";
 }
 
-@mixin pseudo($display: block, $pos: absolute, $content: "") {
-  content: $content;
+@mixin pseudo ($display: block, $pos: absolute) {
   display: $display;
   position: $pos;
 }
 
-@mixin mq($width, $type: max) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-
-    @if $type == max {
-      $width: $width - 1px;
-    }
-
-    @media only screen and (#{$type}-width: $width) {
-      @content;
-    }
+@mixin respond-above ($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
   }
 }
-
 
 @mixin wrapper {
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 253px;
+  padding-right: 253px;
 
-  @include mq("mobile") {
-    min-width: 320px;
-    padding-right: 20px;
-    padding-left: 20px;
+  @include respond-above (1599px) {
+    padding-right: 100px;
+    padding-left: 100px;
   }
 
-  @include mq("tablet") {
+  @include respond-above (1247px) {
     padding-right: 60px;
     padding-left: 60px;
+  }
+
+  @include respond-above (1023px) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  @include respond-above (767px) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

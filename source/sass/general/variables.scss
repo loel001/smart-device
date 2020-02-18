@@ -5,15 +5,14 @@ $color-third: #666666;
 $color-fourth: #1b2d37;
 $color-fifth: #788891;
 $color-sixth: #203c42;
+$color-seventh: #1b2d37;
 
 //остальное
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$breakpoints: (
-  "mobile": 768px,
-  "tablet": 1024px,
-  "desktop": 1248px,
-  "desktop-wide": 1440px
-);
+$breakpoints-mobile: 767px;
+$breakpoints-tablet: 1023px;
+$breakpoints-desktop: 1247px;
+$breakpoints-desktop-wide: 1919px;
