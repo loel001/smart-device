@@ -103,152 +103,168 @@
   </section>
   <section class="services">
     <div class="services__wrapper">
-      <h2>Service Device предлагает следующие товары и услуги</h2>
+      <h2>Service Device предлагает&nbsp;следующие товары и услуги</h2>
       <div class="services__container">
-        <a class="services__link" href="#">
+        <a class="services__link services__link--first" href="#">
           <h3>Производство печатных плат</h3>
           <button type="button" aria-label="Подробнее"></button>
         </a>
-        <a class="services__link" href="#">
+        <a class="services__link services__link--second" href="#">
           <h3>Монтаж печатных плат</h3>
           <button type="button" aria-label="Подробнее"></button>
         </a>
-        <a class="services__link" href="#">
+        <a class="services__link services__link--third" href="#">
           <h3>Комплектующие для светотехники</h3>
           <button type="button" aria-label="Подробнее"></button>
         </a>
       </div>
     </div>
   </section>
-  <section>
-    <div>
+  <section class="popup">
+    <div class="popup__wrapper">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="write-to-us" action="https://echo.htmlacademy.ru" method="post">
-        <div>
-          <label for="name" class="visually-hidden">Ваше имя</label>
-          <input id="name" type="text" name="name" placeholder="Имя">
-        </div>
-        <div>
-          <label for="telephone-number" class="visually-hidden">Телефон</label>
-          <input id="telephone-number" type="number" name="telephone" placeholder="Телефон">
-        </div>
-        <div>
-          <label for="question" class="visually-hidden">Текст письма</label>
-          <textarea id="question" name="question" rows="7" placeholder="Ваш вопрос"></textarea>
-        </div>
-        <button type="submit">Отправить</button>
-        <div>
-          <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="processing-agreement" checked="">
-          <label for="processing-agreement">Я согласен на обработку персональных данных</label>
-        </div>
-      </form>
+      <div class="popup__write-to-us">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="popup__name">
+            <label for="name" class="visually-hidden">Ваше имя</label>
+            <input id="name" type="text" name="name" placeholder="Имя">
+          </div>
+          <div class="popup__telephone-number">
+            <label for="telephone-number" class="visually-hidden">Телефон</label>
+            <input id="telephone-number" type="number" name="telephone" placeholder="Телефон">
+          </div>
+          <div class="popup__question">
+            <label for="question" class="visually-hidden">Текст письма</label>
+            <textarea id="question" name="question" rows="7" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <div class="popup__button">
+            <button type="submit">Отправить</button>
+          </div>
+          <div class="popup__agreement">
+            <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="processing-agreement"
+                   checked="">
+            <label for="processing-agreement">Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
 </main>
 <footer class="page-footer">
-  <div>
-    <div>
-      <h2>Остались вопросы? Задайте их нам!</h2>
-      <p>Мы проконсультируем Вас бесплатно</p>
-      <form class="write-to-us" action="https://echo.htmlacademy.ru" method="post">
-        <div>
-          <div>
-            <label for="appointment-name" class="visually-hidden">Ваше имя</label>
-            <input id="appointment-name" type="text" name="name" placeholder="Имя">
-          </div>
-          <div>
-            <label for="telephone" class="visually-hidden">Телефон</label>
-            <input id="telephone" type="number" name="telephone" placeholder="Телефон">
-          </div>
+  <div class="page-footer__form form">
+    <div class="form__wrapper">
+      <div class="form__block">
+        <h2>Остались вопросы? Задайте их нам!</h2>
+        <p>Мы проконсультируем Вас бесплатно</p>
+        <div class="form__letter">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__wrap">
+              <div class="form__container">
+                <label for="appointment-name" class="visually-hidden">Ваше имя</label>
+                <input id="appointment-name" type="text" name="name" placeholder="Имя">
+              </div>
+              <div class="form__container">
+                <label for="telephone" class="visually-hidden">Телефон</label>
+                <input id="telephone" type="number" name="telephone" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="form__container form__container--text">
+              <label for="appointment-text" class="visually-hidden">Текст письма</label>
+              <textarea id="appointment-text" name="letter" rows="4" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <div class="form__wrap">
+              <div class="form__button">
+                <button type="submit">Задать вопрос</button>
+              </div>
+              <div class="form__agreement">
+                <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="agreement"
+                       checked="">
+                <label for="agreement">Я согласен на обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
         </div>
-        <div>
-          <label for="appointment-text" class="visually-hidden">Текст письма</label>
-          <textarea id="appointment-text" name="letter" rows="7" placeholder="Ваш вопрос"></textarea>
-        </div>
-        <div>
-          <button type="submit">Задать вопрос</button>
-          <div>
-            <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="agreement" checked="">
-            <label for="agreement">Я согласен на обработку персональных данных</label>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
-  <div>
-    <div>
-      <a class="page-footer__logo">
-        <img width="216" height="52" src="img/logo-footer.svg" alt="Логотип Smart Device">
-      </a>
-      <span>1999-2018 SD Service Devices</span>
-      <ul class="page-footer__links social">
-        <li class="social__button">
-          <a class="social__link" href="#">
-            <img width="27" height="27" src="img/facebook.svg" alt="Фейсбук">
-            <span class="visually-hidden">
-              Фейсбук
-            </span>
-          </a>
-        </li>
-        <li class="social__button">
-          <a class="social__link" href="#">
-            <img width="27" height="27" src="img/ok.svg" alt="Одноклассники">
-            <span class="visually-hidden">
-              Одноклассники
-            </span>
-          </a>
-        </li>
-        <li class="social__button">
-          <a class="social__link" href="#">
-            <img width="27" height="27" src="img/vk.svg" alt="Вконтакте">
-            <span class="visually-hidden">
-              Вконтакте
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div>
-        <span>Разделы сайта</span>
-        <ul>
+  <div class="page-footer__wrap">
+    <div class="page-footer__wrapper-desktop">
+      <div class="page-footer__social social">
+        <a class="social__logo">
+          <img width="216" height="52" src="img/logo-footer.svg" alt="Логотип Smart Device">
+        </a>
+        <span>1999-2018 SD Service Devices</span>
+        <ul class="social__links">
           <li>
-            <a href="#">О компании</a>
+            <a>
+              <img width="27" height="27" src="img/facebook.svg" alt="Фейсбук">
+            </a>
           </li>
           <li>
-            <a href="#">Продукты</a>
+            <a>
+              <img width="27" height="27" src="img/ok.svg" alt="Одноклассники">
+            </a>
           </li>
           <li>
-            <a href="#">Производство печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Монтаж печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Комплектующие</a>
-          </li>
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Крнтакты</a>
+            <a>
+              <img width="27" height="27" src="img/vk.svg" alt="Вконтакте">
+            </a>
           </li>
         </ul>
       </div>
-      <div>
-        <address>г. Мытищи, Олимпийский проспект, д.10</address>
-        <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-        <a href="tel:+79250038767">+7 (925) 003-87-67</a>
-        <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+      <div class="page-footer__wrapper-tablet">
+        <div class="page-footer__navigation navigation-footer">
+          <div class="navigation-footer__wrapper navigation-footer__wrapper--accordion">
+            <span>Разделы сайта</span>
+            <ul class="navigation-footer__list navigation-footer__list--first">
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Крнтакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navigation-footer__wrapper navigation-footer__wrapper--accordion">
+          <span>Наш офис</span>
+          <ul class="navigation-footer__list navigation-footer__list--second">
+            <li>
+              <address>г. Мытищи, Олимпийский проспект, д.10</address>
+            </li>
+            <li>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li>
+              <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+            </li>
+            <li>
+              <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <div>
-    <div>
+  <div class="page-footer__information information">
+    <div class="information__wrapper">
       <ul>
         <li>Все права защищены</li>
         <li>1999-2018 SD Service Devices</li>

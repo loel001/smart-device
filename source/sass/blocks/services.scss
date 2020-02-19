@@ -16,22 +16,189 @@
     padding-left: 150px;
   }
 
-  @include respond-above (1247px) {
+  @include respond-above ($breakpoints-desktop) {
     padding-right: 100px;
     padding-left: 100px;
   }
 
-  @include respond-above (1023px) {
+  @include respond-above ($breakpoints-tablet) {
     padding-right: 25px;
     padding-left: 25px;
     padding-top: 50px;
     padding-bottom: 78px;
   }
 
-  @include respond-above (767px) {
+  @include respond-above ($breakpoints-mobile) {
     min-width: 320px;
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 65px;
+  }
+}
+
+.services__wrapper h2 {
+  @include content;
+
+  @include roboto-condensed(36px, $color-first, 400);
+  margin-bottom: 50px;
+  line-height: 140%;
+  letter-spacing: -1px;
+
+  @include respond-above ($breakpoints-tablet) {
+    font-size: 32px;
+    padding-right: 100px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 40px;
+    font-size: 28px;
+    padding-right: 0;
+  }
+}
+
+.services__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: block;
+  }
+}
+
+.services__link {
+  background-color: $color-sixth;
+  padding-top: 53px;
+  padding-left: 45px;
+  padding-right: 53px;
+  padding-bottom: 505px;
+  position: relative;
+  cursor: pointer;
+  width: 32%;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 100%;
+    padding-top: 53px;
+    padding-bottom: 143px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    padding-top: 23px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 173px;
+  }
+
+  &--first {
+    background-image: url("../img/production-desktop-1x.png");
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/production-desktop-2x.png");
+      background-size: 100% 100%;
+    }
+
+    @include respond-above ($breakpoints-tablet) {
+      background-image: url("../img/production-tablet-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/production-tablet-2x.png");
+      }
+    }
+  }
+
+  &--second {
+    background-image: url("../img/mounting-desktop-1x.png");
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mounting-desktop-2x.png");
+      background-size: 100% 100%;
+    }
+
+    @include respond-above ($breakpoints-tablet) {
+      background-image: url("../img/mounting-tablet-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mounting-tablet-2x.png");
+      }
+    }
+  }
+
+  &--third {
+    background-image: url("../img/complete-desktop-1x.png");
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/complete-desktop-2x.png");
+      background-size: 100% 100%;
+    }
+
+    @include respond-above ($breakpoints-tablet) {
+      background-image: url("../img/complete-tablet-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/complete-tablet-2x.png");
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.services__link:not(:last-child) {
+  @include respond-above ($breakpoints-tablet) {
+    margin-bottom: 45px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.services__link h3 {
+  @include content;
+  line-height: 30px;
+
+  @include roboto-condensed(20px, $color-first, 400);
+  max-width: 190px;
+}
+
+.services__link button {
+  display: block;
+  padding: 0;
+  width: 63px;
+  height: 63px;
+  background-color: $color-second;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+
+  &:before {
+    @include icon;
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 9px;
+    background-image: url("../img/right.svg");
+    background-size: 6px 9px;
+    top: 0;
+    left: 30px;
   }
 }

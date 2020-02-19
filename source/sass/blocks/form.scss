@@ -1,0 +1,256 @@
+.form {
+  width: 100%;
+  background-color: $color-second;
+}
+
+.form__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 375px;
+  padding-right: 375px;
+  padding-top: 95px;
+  padding-bottom: 114px;
+
+  @include respond-above (1599px) {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  @include respond-above ($breakpoints-desktop) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+.form__block {
+  display: block;
+  width: 49%;
+  margin-left: auto;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 100%;
+  }
+}
+
+.form__block h2 {
+  @include content;
+
+  @include roboto-condensed(36px, $color-first, 400);
+  line-height: 140%;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+
+  @include respond-above ($breakpoints-tablet) {
+    font-size: 32px;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+.form__block p {
+  @include content;
+
+  @include pt-mono(16px, $color-first, 400);
+  line-height: 134%;
+  margin-bottom: 53px;
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 25px;
+  }
+}
+
+.form__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+  }
+}
+
+.form__container {
+  width: 47%;
+  display: block;
+  margin-bottom: 31px;
+
+  &--text {
+    width: 100%;
+  }
+
+  @include respond-above ($breakpoints-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.form__container input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+
+  @include pt-mono(16px, $color-first, 400);
+
+  &:hover {
+    border: 1px solid $color-first;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus {
+    border: 1px solid $color-first;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.form__container textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  resize: none;
+  height: 167px;
+
+  @include pt-mono(16px, $color-first, 400);
+
+  @include respond-above ($breakpoints-mobile) {
+    height: auto;
+  }
+
+  &:hover {
+    border: 1px solid $color-first;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus {
+    border: 1px solid $color-first;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.form__container input::placeholder {
+  @include pt-mono(16px, $color-first, 400);
+}
+
+.form__container textarea::placeholder {
+  @include pt-mono(16px, $color-first, 400);
+}
+
+.form__button {
+  display: block;
+  width: 48%;
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.form__button button {
+  display: block;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  @include roboto-condensed(14px, $color-first, 700);
+  border: 1px solid $color-first;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.form__agreement {
+  width: 46%;
+  padding-left: 33px;
+  padding-top: 10px;
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+.form__agreement input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form__agreement label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  @include pt-mono(14px, $color-first, 400);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.form__agreement input:checked + label::before {
+  @include icon;
+  display: block;
+  width: 9px;
+  height: 6px;
+  position: absolute;
+  background-image: url("../img/jackdaw.svg");
+  background-size: 9px 6px;
+  top: 5px;
+  left: -28px;
+}
+
+.form__agreement input + label::after {
+  @include icon;
+  display: block;
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  border: 1px solid $color-first;
+  top: 0;
+  left: -33px;
+}

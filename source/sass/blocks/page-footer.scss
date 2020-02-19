@@ -1,0 +1,107 @@
+.page-footer {
+  width: 100%;
+}
+
+.page-footer__wrap {
+  width: 100%;
+  background-color: $color-first;
+  border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+}
+
+.page-footer__social {
+  @include respond-above ($breakpoints-tablet) {
+    width: 100%;
+    background-color: $color-first;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+  }
+}
+
+.page-footer__navigation {
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+    background-color: $color-first;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+  }
+}
+
+.page-footer__information {
+  width: 100%;
+  background-color: $color-first;
+}
+
+.information__wrapper {
+  @include wrapper;
+}
+
+.page-footer__wrapper-desktop {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 253px;
+  padding-right: 253px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include respond-above (1599px) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include respond-above ($breakpoints-desktop) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-right: 0;
+    padding-left: 0;
+    display: block;
+  }
+}
+
+.page-footer__social {
+  @include respond-above ($breakpoints-tablet) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.page-footer__wrapper-tablet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 100%;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    padding-right: 0;
+    padding-left: 0;
+    display: block;
+  }
+}
+
+.page-footer__social {
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+}

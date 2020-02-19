@@ -1,0 +1,89 @@
+.social {
+  width: 216px;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+  }
+}
+
+.social__logo {
+  width: 216px;
+  height: 52px;
+  margin-bottom: 55px;
+  cursor: pointer;
+
+  @include respond-above ($breakpoints-tablet) {
+    margin-bottom: 0;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    margin: 0 auto;
+    margin-bottom: 28px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.social span {
+  @include pt-mono(13px, rgba(27, 45, 55, 0.5), 400);
+
+  text-transform: uppercase;
+  line-height: 24px;
+  display: none;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: block;
+    width: 220px;
+    padding-top: 17px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 0;
+    width: auto;
+  }
+}
+
+.social__links {
+  @include list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 112px;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-top: 17px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    padding-top: 0;
+    margin: 0 auto;
+  }
+}
+
+.social__links li {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,70 @@
+.information__wrapper ul {
+  @include list;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+.information__wrapper ul li {
+  @include pt-mono(13px, rgba(27, 45, 55, 0.5), 400);
+
+  text-transform: uppercase;
+  line-height: 24px;
+
+  @include respond-above ($breakpoints-mobile) {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.information__wrapper ul li:first-child {
+  margin-right: auto;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: none;
+  }
+}
+
+.information__wrapper ul li:nth-child(2) {
+  margin-left: 60px;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: none;
+  }
+}
+
+.information__wrapper ul li:nth-child(3) {
+  margin-left: 140px;
+
+  @include respond-above ($breakpoints-tablet) {
+    margin-left: 0;
+  }
+}
+
+.information__wrapper ul li:last-child {
+  margin-left: auto;
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-left: 0;
+  }
+}
+
+.information__wrapper ul li:not(:last-child) {
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 20px;
+  }
+}

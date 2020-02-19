@@ -1,0 +1,132 @@
+.navigation-footer {
+  width: 60%;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 48%;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+  }
+}
+
+.navigation-footer__wrapper {
+  padding-top: 65px;
+  padding-bottom: 55px;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-top: 38px;
+    padding-bottom: 33px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+}
+
+.navigation-footer__list {
+  @include list;
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-top: 30px;
+    display: none;
+  }
+
+  &--first {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-above ($breakpoints-tablet) {
+      width: 48%;
+      display: block;
+    }
+
+    @include respond-above ($breakpoints-mobile) {
+      width: 100%;
+      display: none;
+    }
+  }
+
+  &--second {
+    @media screen and (min-width: 1024px) {
+      width: 34%;
+    }
+  }
+}
+
+.navigation-footer__list--show {
+  display: block;
+}
+
+.navigation-footer__list li {
+  @include pt-mono(15px, rgba(27, 45, 55, 0.5), 400);
+  line-height: 170%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.navigation-footer__list li a{
+  color: rgba(27,45,55,.5);
+}
+
+.navigation-footer__list li address{
+  font-style: normal;
+}
+
+.navigation-footer__wrapper span {
+  @include roboto-condensed(15px, $color-fourth, 400);
+  line-height: 16px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  display: block;
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 0;
+    width: 100%;
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.navigation-footer__wrapper span:after {
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background-color: #c4c4c4;
+    right: 0;
+    top: 7px;
+    content: "";
+  }
+}
+
+.navigation-footer__wrapper--accordion span:before {
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    right: 7px;
+    top: 0;
+    background-color: #c4c4c4;
+    content: "";
+  }
+}
