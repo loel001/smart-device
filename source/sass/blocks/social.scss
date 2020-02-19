@@ -6,10 +6,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   @include respond-above ($breakpoints-mobile) {
     display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 320px;
   }
 }
 

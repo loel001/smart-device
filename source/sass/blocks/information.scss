@@ -32,8 +32,6 @@
 }
 
 .information__wrapper ul li:first-child {
-  margin-right: auto;
-
   @include respond-above ($breakpoints-tablet) {
     display: none;
   }
@@ -48,7 +46,7 @@
 }
 
 .information__wrapper ul li:nth-child(3) {
-  margin-left: 140px;
+  margin-left: 157px;
 
   @include respond-above ($breakpoints-tablet) {
     margin-left: 0;

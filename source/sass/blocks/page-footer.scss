@@ -8,14 +8,6 @@
   border-bottom: 1px solid rgba(98, 105, 98, 0.2);
 }
 
-.page-footer__social {
-  @include respond-above ($breakpoints-tablet) {
-    width: 100%;
-    background-color: $color-first;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
-  }
-}
-
 .page-footer__navigation {
   @include respond-above ($breakpoints-mobile) {
     width: 100%;
@@ -59,19 +51,6 @@
   }
 }
 
-.page-footer__social {
-  @include respond-above ($breakpoints-tablet) {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
-  @include respond-above ($breakpoints-mobile) {
-    min-width: 320px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
 .page-footer__wrapper-tablet {
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +77,9 @@
   @include respond-above ($breakpoints-tablet) {
     padding-top: 20px;
     padding-bottom: 25px;
+    width: 100%;
+    background-color: $color-first;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 
   @include respond-above ($breakpoints-mobile) {

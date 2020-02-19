@@ -1,4 +1,4 @@
-.navigation-footer {
+.navigation-footer__wrap {
   width: 60%;
 
   @include respond-above ($breakpoints-tablet) {
@@ -7,6 +7,7 @@
 
   @include respond-above ($breakpoints-mobile) {
     width: 100%;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }
 
@@ -26,6 +27,18 @@
     padding-top: 30px;
     padding-bottom: 25px;
   }
+
+  &--second {
+    width: 34%;
+
+    @include respond-above ($breakpoints-tablet) {
+      width: 48%;
+    }
+
+    @include respond-above ($breakpoints-mobile) {
+      width: 100%;
+    }
+  }
 }
 
 .navigation-footer__list {
@@ -42,20 +55,20 @@
     justify-content: space-between;
 
     @include respond-above ($breakpoints-tablet) {
-      width: 48%;
       display: block;
     }
 
     @include respond-above ($breakpoints-mobile) {
-      width: 100%;
       display: none;
     }
   }
+}
 
-  &--second {
-    @media screen and (min-width: 1024px) {
-      width: 34%;
-    }
+.navigation-footer__list--first li {
+  width: 48%;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 100%;
   }
 }
 
@@ -77,11 +90,11 @@
   }
 }
 
-.navigation-footer__list li a{
-  color: rgba(27,45,55,.5);
+.navigation-footer__list li a {
+  color: rgba(27, 45, 55, 0.5);
 }
 
-.navigation-footer__list li address{
+.navigation-footer__list li address {
   font-style: normal;
 }
 
@@ -105,7 +118,7 @@
   }
 }
 
-.navigation-footer__wrapper span:after {
+.navigation-footer__wrapper span::after {
   @include respond-above ($breakpoints-mobile) {
     display: block;
     position: absolute;
@@ -118,7 +131,7 @@
   }
 }
 
-.navigation-footer__wrapper--accordion span:before {
+.navigation-footer__wrapper--accordion span::before {
   @include respond-above ($breakpoints-mobile) {
     display: block;
     position: absolute;

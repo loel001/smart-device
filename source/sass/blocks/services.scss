@@ -38,7 +38,6 @@
 
 .services__wrapper h2 {
   @include content;
-
   @include roboto-condensed(36px, $color-first, 400);
   margin-bottom: 50px;
   line-height: 140%;
@@ -189,16 +188,16 @@
   bottom: 0;
   right: 0;
   cursor: pointer;
+}
 
-  &:before {
-    @include icon;
-    display: block;
-    position: relative;
-    width: 6px;
-    height: 9px;
-    background-image: url("../img/right.svg");
-    background-size: 6px 9px;
-    top: 0;
-    left: 30px;
-  }
+.services__link button::before {
+  @include icon;
+  display: block;
+  position: relative;
+  width: 6px;
+  height: 9px;
+  background-image: url("../img/right.svg");
+  background-size: 6px 9px;
+  top: 0;
+  left: 30px;
 }
