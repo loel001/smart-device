@@ -78,10 +78,6 @@
   &:active {
     opacity: 0.5;
   }
-
-  @include respond-above($breakpoints-mobile) {
-    height: 38px;
-  }
 }
 
 .navigation__email {
@@ -179,8 +175,8 @@
   width: 180px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 12px;
-  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-top: 14px;
   text-align: center;
   text-transform: uppercase;
   background-color: transparent;

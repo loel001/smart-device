@@ -38,19 +38,26 @@
     <div class="page-header__container">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button type="button">
+      <a href="#anchor-form">
         <span>Получить бесплатную консультацию</span>
         <span>Бесплатная консультация</span>
-      </button>
+      </a>
     </div>
-    <button type="button" class="page-header__scroll">Скролл вниз</button>
+    <div class="page-header__picture">
+      <picture>
+        <source media="(min-width: 1248px)" srcset="img/pay-desktop.png 1x, img/pay-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/pay-tablet.png 1x, img/pay-tablet@2x.png 2x">
+        <img src="img/pay-mobile.png" srcset="img/pay-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата">
+      </picture>
+    </div>
+    <a class="page-header__scroll" href="#anchor">Скролл вниз</a>
   </div>
 </header>
 <main>
   <h1 class="visually-hidden">Smart Device - умные технологии</h1>
   <section class="about-company">
     <div class="about-company__wrapper">
-      <div class="about-company__content">
+      <a name="anchor" class="about-company__content">
         <div class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="29" height="35">
@@ -90,7 +97,7 @@
           <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
             устраивает.</p>
         </div>
-      </div>
+      </a>
       <div class="about-company__information">
         <h2>О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
@@ -157,7 +164,7 @@
   <div class="page-footer__form form">
     <div class="form__wrapper">
       <div class="form__block">
-        <h2>Остались вопросы? Задайте их нам!</h2>
+        <a name="anchor-form">Остались вопросы? Задайте их нам!</a>
         <p>Мы проконсультируем Вас бесплатно</p>
         <div class="form__letter">
           <form action="https://echo.htmlacademy.ru" method="post">

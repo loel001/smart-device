@@ -1,45 +1,45 @@
 .page-header {
   width: 100%;
   background-color: $color-seventh;
-  background-image: url("../img/pay-1x.png"), url("../img/polygons-desktop.svg"), url("../img/background-1x.png");
-  background-position: calc(50vw + 80px) 257px, calc(50vw - 960px) -35px, 0 0;
-  background-size: 705px 515px, 1920px 950px, 100% 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-image: url("../img/polygons-desktop.svg"), url("../img/background-1x.png");
+  background-position: calc(50vw - 960px) -35px, 0 0;
+  background-size: 1920px 950px, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/pay-2x.png"), url("../img/polygons-desktop.svg"), url("../img/background-2x.png");
+    background-image: url("../img/polygons-desktop.svg"), url("../img/background-2x.png");
   }
 
   @include respond-above ($breakpoints-desktop) {
-    background-image: url("../img/pay-1x.png"), url("../img/polygons-tablet.svg"), url("../img/background-1x.png");
-    background-position: calc(100vw - 260px) 160px, calc(100vw - 770px) 0, 0 0;
-    background-size: 465px 340px, 770px 653px, 100% 100%;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: url("../img/polygons-tablet.svg"), url("../img/background-1x.png");
+    background-position: calc(100vw - 770px) 0, 0 0;
+    background-size: 770px 653px, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/pay-2x.png"), url("../img/polygons-tablet.svg"), url("../img/background-2x.png");
+      background-image: url("../img/polygons-tablet.svg"), url("../img/background-2x.png");
     }
   }
 
   @include respond-above ($breakpoints-tablet) {
-    background-position: calc(100vw - 260px) 114px, calc(100vw - 770px) -45px, 0 0;
+    background-position: calc(100vw - 770px) -45px, 0 0;
   }
 
   @include respond-above ($breakpoints-mobile) {
-    background-image: url("../img/pay-1x.png"), url("../img/polygons-mobile.svg"), url("../img/background-1x.png");
-    background-position: calc(100vw - 295px) 93px, calc(100vw - 320px) 0, 0 0;
-    background-size: 301px 220px, 320px 529px, 100% 100%;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: url("../img/polygons-mobile.svg"), url("../img/background-1x.png");
+    background-position: calc(100vw - 320px) 0, 0 0;
+    background-size: 320px 529px, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/pay-2x.png"), url("../img/polygons-mobile.svg"), url("../img/background-2x.png");
+      background-image: url("../img/polygons-mobile.svg"), url("../img/background-2x.png");
     }
   }
 }
 
 .page-header__wrapper {
   position: relative;
-  overflow: hidden;
 
   @include wrapper;
   padding-top: 33px;
@@ -53,12 +53,16 @@
   @include respond-above ($breakpoints-mobile) {
     padding-top: 17px;
     padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 .page-header__container {
   margin-top: 230px;
   max-width: 745px;
+  z-index: 10;
 
   @include respond-above ($breakpoints-tablet) {
     margin-top: 117px;
@@ -133,11 +137,12 @@
   }
 }
 
-.page-header__container button {
+.page-header__container a {
   @include button;
 
   border-radius: 5px;
   background-color: $color-second;
+  text-align: center;
 
   @include roboto-condensed(16px, $color-first, 700, 19px);
   text-transform: uppercase;
@@ -157,7 +162,7 @@
 
   @include respond-above ($breakpoints-mobile) {
     width: 287px;
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   &:hover {
@@ -169,7 +174,7 @@
   }
 }
 
-.page-header__container button span:first-child {
+.page-header__container a span:first-child {
   display: block;
 
   @include respond-above ($breakpoints-mobile) {
@@ -177,7 +182,7 @@
   }
 }
 
-.page-header__container button span:nth-child(2) {
+.page-header__container a span:nth-child(2) {
   display: none;
 
   @include respond-above ($breakpoints-mobile) {
@@ -194,18 +199,10 @@
   @include pt-mono(14px, rgba(255, 255, 255, 0.5), 400, 16px);
   content: "";
   bottom: 127px;
-  left: 217px;
+  left: 0;
   transform: rotate(-90deg);
   padding: 0;
   cursor: pointer;
-
-  @include respond-above (1599px) {
-    left: 60px;
-  }
-
-  @include respond-above ($breakpoints-desktop) {
-    left: 25px;
-  }
 
   @include respond-above ($breakpoints-tablet) {
     display: none;
@@ -217,5 +214,37 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.page-header__picture {
+  display: block;
+}
+
+.page-header__picture img {
+  display: block;
+  width: 705px;
+  height: 515px;
+  background-color: transparent;
+  position: absolute;
+  right: -81px;
+  top: 254px;
+
+  @include respond-above (1409px) {
+    right: -165px;
+  }
+
+  @include respond-above (1247px) {
+    width: 260px;
+    height: 340px;
+    top: 113px;
+    right: 0;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 301px;
+    height: 220px;
+    right: -20px;
+    top: 92px;
   }
 }

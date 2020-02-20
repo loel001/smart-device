@@ -26,22 +26,15 @@
 }
 
 .page-footer__wrapper-desktop {
-  max-width: 1920px;
+  max-width: 1410px;
   margin: 0 auto;
-  padding-left: 253px;
-  padding-right: 253px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include respond-above (1599px) {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-
-  @include respond-above ($breakpoints-desktop) {
-    padding-right: 60px;
-    padding-left: 60px;
+  @include respond-above (1489px) {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   @include respond-above ($breakpoints-tablet) {

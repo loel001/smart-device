@@ -16,21 +16,14 @@
 }
 
 .form__wrapper {
-  max-width: 1920px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding-left: 375px;
-  padding-right: 375px;
   padding-top: 90px;
   padding-bottom: 114px;
 
-  @include respond-above (1599px) {
-    padding-right: 150px;
-    padding-left: 150px;
-  }
-
-  @include respond-above ($breakpoints-desktop) {
-    padding-right: 100px;
-    padding-left: 100px;
+  @include respond-above (1279px) {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
   @include respond-above ($breakpoints-tablet) {
@@ -59,7 +52,7 @@
   }
 }
 
-.form__block h2 {
+.form__block a {
   @include content;
   @include roboto-condensed(36px, $color-first, 400, 51px);
   margin-bottom: 10px;
