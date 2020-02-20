@@ -8,6 +8,10 @@
   background-size: 336px 324px, 336px 324px, 925px 861px;
   background-repeat: no-repeat, no-repeat, no-repeat;
 
+  @include respond-above($breakpoints-tablet) {
+    background-image: none;
+  }
+
   &::after {
     @include icon;
 
