@@ -2,8 +2,8 @@
   width: 100%;
   background-color: $color-second;
   background-image: url("../img/airplane-1x.png"), url("../img/polygon-5.svg"), url("../img/polygon-6.svg"), url("../img/polygon-7.svg");
-  background-position: calc(50vw - 610px) 160px, calc(50vw + 680px) 44px, calc(50vw + 616px) 290px, calc(50vw - 786px) -60px;
-  background-size: 511px 288px, 265px 255px, 343px 405px, 671px 641px;
+  background-position: calc(50vw - 610px) 160px, calc(50vw + 680px) 44px, calc(50vw + 525px) 290px, calc(50vw - 786px) -60px;
+  background-size: 511px 288px, 265px 255px, 528px 402px, 671px 641px;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
