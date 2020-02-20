@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding-left: 375px;
   padding-right: 375px;
-  padding-top: 90px;
+  padding-top: 85px;
   padding-bottom: 127px;
 
   @include respond-above (1599px) {
@@ -38,20 +38,21 @@
 
 .services__wrapper h2 {
   @include content;
-  @include roboto-condensed(36px, $color-first, 400);
+  @include roboto-condensed(36px, $color-first, 400, 51px);
   margin-bottom: 50px;
-  line-height: 140%;
-  letter-spacing: -1px;
 
   @include respond-above ($breakpoints-tablet) {
     font-size: 32px;
     padding-right: 100px;
+    line-height: 45px;
   }
 
   @include respond-above ($breakpoints-mobile) {
     margin-bottom: 40px;
     font-size: 28px;
     padding-right: 0;
+    line-height: 39px;
+    padding-left: 10px;
   }
 }
 
@@ -70,15 +71,15 @@
   padding-top: 53px;
   padding-left: 45px;
   padding-right: 53px;
-  padding-bottom: 505px;
+  padding-bottom: 510px;
   position: relative;
   cursor: pointer;
   width: 32%;
 
   @include respond-above ($breakpoints-tablet) {
     width: 100%;
-    padding-top: 53px;
-    padding-bottom: 143px;
+    padding-top: 40px;
+    padding-bottom: 156px;
     padding-left: 45px;
     padding-right: 45px;
   }
@@ -98,7 +99,6 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/production-desktop-2x.png");
-      background-size: 100% 100%;
     }
 
     @include respond-above ($breakpoints-tablet) {
@@ -118,7 +118,6 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/mounting-desktop-2x.png");
-      background-size: 100% 100%;
     }
 
     @include respond-above ($breakpoints-tablet) {
@@ -138,7 +137,6 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/complete-desktop-2x.png");
-      background-size: 100% 100%;
     }
 
     @include respond-above ($breakpoints-tablet) {
@@ -174,7 +172,7 @@
   line-height: 30px;
 
   @include roboto-condensed(20px, $color-first, 400);
-  max-width: 190px;
+  max-width: 165px;
 }
 
 .services__link button {

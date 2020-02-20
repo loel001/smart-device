@@ -9,14 +9,14 @@
   padding: 0;
 }
 
-@mixin size-radius ($width, $height, $radius) {
-  width: $width;
-  height: $height;
-  border-radius: $radius;
+@mixin button {
+  display: block;
+  border: 0;
+  padding: 0;
 }
 
-@mixin pt-mono ($size: false, $colour: false, $weight: false,  $lh: false) {
-  font-family: "PT-Mono", "Arial", sans-serif;
+@mixin pt-mono($size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: "PT Mono", "Arial", sans-serif;
 
   @if $size {
     font-size: $size;
@@ -35,8 +35,8 @@
   }
 }
 
-@mixin roboto-condensed ($size: false, $colour: false, $weight: false,  $lh: false) {
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+@mixin roboto-condensed($size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 
   @if $size {
     font-size: $size;
@@ -83,17 +83,17 @@
     padding-left: 100px;
   }
 
-  @include respond-above (1247px) {
+  @include respond-above ($breakpoints-desktop) {
     padding-right: 60px;
     padding-left: 60px;
   }
 
-  @include respond-above (1023px) {
+  @include respond-above ($breakpoints-tablet) {
     padding-right: 25px;
     padding-left: 25px;
   }
 
-  @include respond-above (767px) {
+  @include respond-above ($breakpoints-mobile) {
     min-width: 320px;
     padding-right: 15px;
     padding-left: 15px;

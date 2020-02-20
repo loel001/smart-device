@@ -5,15 +5,6 @@
 }
 
 .navigation__logo {
-  width: 202px;
-  height: 52px;
-  cursor: pointer;
-
-  @include respond-above($breakpoints-mobile) {
-    width: 38px;
-    height: 38px;
-  }
-
   &:hover {
     opacity: 0.7;
   }
@@ -23,19 +14,13 @@
   }
 }
 
-.navigation__logo img:first-child {
-  display: none;
+.navigation__logo img {
+  width: 202px;
+  height: 52px;
 
   @include respond-above($breakpoints-mobile) {
-    display: block;
-  }
-}
-
-.navigation__logo img:nth-child(2) {
-  display: block;
-
-  @include respond-above($breakpoints-mobile) {
-    display: none;
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -59,14 +44,13 @@
 }
 
 .navigation__open {
+  @include button;
+
   display: block;
-  border: none;
   width: 37px;
-  height: 52px;
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  padding: 0;
 
   &::before {
     @include pseudo(block, absolute);
@@ -101,11 +85,10 @@
 }
 
 .navigation__email {
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 18px);
   position: relative;
   cursor: pointer;
   padding-left: 40px;
-  line-height: 52px;
   margin-right: 35px;
 
   @include respond-above($breakpoints-desktop-wide) {
@@ -114,10 +97,9 @@
   }
 
   @include respond-above($breakpoints-tablet) {
-    font-size: 0;
     width: 26px;
+    height: 19px;
     padding-left: 0;
-    line-height: 38px;
   }
 
   &::before {
@@ -126,7 +108,7 @@
     width: 18px;
     height: 18px;
     left: 0;
-    top: 14px;
+    top: 0;
     background-image: url("../img/envelope.svg");
     background-size: 18px 18px;
 
@@ -135,10 +117,6 @@
       height: 19px;
       background-size: 26px 19px;
       padding-left: 0;
-    }
-
-    @include respond-above($breakpoints-mobile) {
-      top: 7px;
     }
   }
 
@@ -152,10 +130,9 @@
 }
 
 .navigation__phone-number {
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 18px);
   position: relative;
   cursor: pointer;
-  line-height: 52px;
   padding-left: 40px;
 
   @include respond-above($breakpoints-desktop-wide) {
@@ -163,10 +140,9 @@
   }
 
   @include respond-above($breakpoints-tablet) {
-    font-size: 0;
     width: 24px;
+    height: 24px;
     padding-left: 0;
-    line-height: 38px;
   }
 
   &::before {
@@ -175,7 +151,7 @@
     width: 18px;
     height: 18px;
     left: 0;
-    top: 15px;
+    top: 0;
     background-image: url("../img/phone-call.svg");
     background-size: 18px 18px;
 
@@ -183,11 +159,6 @@
       width: 24px;
       height: 24px;
       background-size: 24px 24px;
-      top: 10px;
-    }
-
-    @include respond-above($breakpoints-mobile) {
-      top: 5px;
     }
   }
 
@@ -201,19 +172,21 @@
 }
 
 .navigation__button {
-  display: block;
+  @include button;
+
   border: 1px solid $color-first;
   border-radius: 5px;
   width: 180px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 12px;
+  padding-top: 12px;
   text-align: center;
   text-transform: uppercase;
   background-color: transparent;
+  letter-spacing: 0.05em;
 
-  @include roboto-condensed(14px, $color-first, 700);
+  @include roboto-condensed(14px, $color-first, 700, 16px);
   cursor: pointer;
 
 
@@ -234,6 +207,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   width: 662px;
 
   @include respond-above($breakpoints-desktop-wide) {
@@ -246,5 +220,17 @@
 
   @include respond-above($breakpoints-mobile) {
     width: 73px;
+  }
+}
+
+.navigation__email span {
+  @include respond-above($breakpoints-tablet) {
+    display: none;
+  }
+}
+
+.navigation__phone-number span {
+  @include respond-above($breakpoints-tablet) {
+    display: none;
   }
 }

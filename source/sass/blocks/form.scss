@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding-left: 375px;
   padding-right: 375px;
-  padding-top: 95px;
+  padding-top: 90px;
   padding-bottom: 114px;
 
   @include respond-above (1599px) {
@@ -25,7 +25,7 @@
     padding-right: 90px;
     padding-left: 90px;
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 114px;
   }
 
   @include respond-above ($breakpoints-mobile) {
@@ -49,31 +49,33 @@
 
 .form__block h2 {
   @include content;
-  @include roboto-condensed(36px, $color-first, 400);
-  line-height: 140%;
+  @include roboto-condensed(36px, $color-first, 400, 51px);
   margin-bottom: 10px;
-  letter-spacing: -1px;
 
   @include respond-above ($breakpoints-tablet) {
     font-size: 32px;
-    letter-spacing: normal;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    line-height: 45px;
   }
 
   @include respond-above ($breakpoints-mobile) {
     font-size: 28px;
     margin-bottom: 15px;
+    line-height: 39px;
   }
 }
 
 .form__block p {
   @include content;
-  @include pt-mono(16px, $color-first, 400);
-  line-height: 134%;
+  @include pt-mono(16px, $color-first, 400, 22px);
   margin-bottom: 53px;
 
+  @include respond-above ($breakpoints-tablet) {
+    margin-bottom: 50px;
+  }
+
   @include respond-above ($breakpoints-mobile) {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
   }
 }
 
@@ -98,7 +100,7 @@
   }
 
   @include respond-above ($breakpoints-tablet) {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   @include respond-above ($breakpoints-mobile) {
@@ -117,7 +119,7 @@
   padding-right: 15px;
   cursor: pointer;
 
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 22px);
 
   &:hover {
     border: 1px solid $color-first;
@@ -134,7 +136,7 @@
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid transparent;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-left: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
@@ -142,10 +144,10 @@
   resize: none;
   height: 167px;
 
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 22px);
 
   @include respond-above ($breakpoints-mobile) {
-    height: auto;
+    height: 100px;
   }
 
   &:hover {
@@ -160,11 +162,11 @@
 }
 
 .form__container input::placeholder {
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 22px);
 }
 
 .form__container textarea::placeholder {
-  @include pt-mono(16px, $color-first, 400);
+  @include pt-mono(16px, $color-first, 400, 22px);
 }
 
 .form__button {
@@ -173,7 +175,7 @@
 
   @include respond-above ($breakpoints-mobile) {
     width: 100%;
-    margin-bottom: 33px;
+    margin-bottom: 31px;
   }
 }
 
@@ -185,8 +187,9 @@
   padding-left: 10px;
   padding-right: 10px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 
-  @include roboto-condensed(14px, $color-first, 700);
+  @include roboto-condensed(14px, $color-first, 700, 16px);
   border: 1px solid $color-first;
   border-radius: 5px;
   text-align: center;
@@ -224,7 +227,7 @@
   position: relative;
   cursor: pointer;
 
-  @include pt-mono(14px, $color-first, 400);
+  @include pt-mono(14px, rgba(255, 255, 255, 0.8), 400, 16px);
 
   &:hover {
     opacity: 0.7;

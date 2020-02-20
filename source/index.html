@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <title>Smart Device - умные технологии</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -19,16 +19,18 @@
   <div class="page-header__wrapper">
     <nav class="page-header__navigation navigation">
       <a class="navigation__logo">
-        <img width="38" height="38" src="img/logo-mobile.svg" alt="Логотип Smart Device">
-        <img width="202" height="52" src="img/logo.svg" alt="Логотип Smart Device">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo.svg">
+          <img width="38" height="38" src="img/logo-mobile.svg" alt="Логотип Smart Device">
+        </picture>
       </a>
       <div class="navigation__wrapper">
         <button class="navigation__open" type="button" aria-label="Открыть меню"></button>
         <div class="navigation__content">
           <a class="navigation__email" href="mailto:info@sd.ru" aria-label="info@sd.ru">
-            info@sd.ru
+            <span>info@sd.ru</span>
           </a>
-          <a class="navigation__phone-number" href="tel:+74950005252" aria-label="+74950005252">+7 (495) 000 52 52</a>
+          <a class="navigation__phone-number" href="tel:+74950005252" aria-label="+74950005252"><span>+7 (495) 000 52 52</span></a>
           <button class="navigation__button" type="button">Заказать звонок</button>
         </div>
       </div>
@@ -241,7 +243,8 @@
             </ul>
           </div>
         </div>
-        <div class="navigation-footer__wrapper navigation-footer__wrapper--second navigation-footer__wrapper--accordion">
+        <div
+          class="navigation-footer__wrapper navigation-footer__wrapper--second navigation-footer__wrapper--accordion">
           <span>Наш офис</span>
           <ul class="navigation-footer__list navigation-footer__list--second">
             <li>

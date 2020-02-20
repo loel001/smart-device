@@ -14,16 +14,16 @@
 
   @include respond-above ($breakpoints-mobile) {
     display: block;
-    padding-top: 26px;
+    padding-top: 30px;
     padding-bottom: 26px;
   }
 }
 
 .information__wrapper ul li {
-  @include pt-mono(13px, rgba(27, 45, 55, 0.5), 400);
+  @include pt-mono(13px, rgba(27, 45, 55, 0.5), 400, 24px);
 
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  line-height: 24px;
 
   @include respond-above ($breakpoints-mobile) {
     text-align: center;

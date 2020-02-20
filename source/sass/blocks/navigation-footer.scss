@@ -77,8 +77,7 @@
 }
 
 .navigation-footer__list li {
-  @include pt-mono(15px, rgba(27, 45, 55, 0.5), 400);
-  line-height: 170%;
+  @include pt-mono(15px, rgba(27, 45, 55, 0.5), 400, 25px);
   cursor: pointer;
 
   &:hover {
@@ -99,11 +98,11 @@
 }
 
 .navigation-footer__wrapper span {
-  @include roboto-condensed(15px, $color-fourth, 400);
-  line-height: 16px;
+  @include roboto-condensed(15px, $color-fourth, 400, 16px);
   margin-bottom: 25px;
   text-transform: uppercase;
   display: block;
+  letter-spacing: 0.05em;
 
   @include respond-above ($breakpoints-mobile) {
     margin-bottom: 0;
