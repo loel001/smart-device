@@ -41,28 +41,16 @@
   const hiddenElementScroll = document.querySelector(".about-company");
   const btnScroll = document.querySelector(".page-header__scroll");
 
-  // let handleButtonClick = function (el) {
-  //   el.scrollIntoView({block: "center", behavior: "smooth"});
-  // };
-  //
-  // btn.addEventListener("click", function () {
-  //   console.log(1);
-  //   el.scrollIntoView({block: "center", behavior: "smooth"});
-  //   handleButtonClick(hiddenElement);
-  // });
-  //
-  // btnScroll.addEventListener("click", function () {
-  //   console.log(1);
-  //   handleButtonClick(hiddenElementScroll);
-  // });
+  function handleButtonClick() {
+    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+  }
 
-  let handleButtonClick = function(element) {
-    element.scrollIntoView({block: "center", behavior: "smooth"});
-  };
+  function handleButtonScroll() {
+    hiddenElementScroll.scrollIntoView({block: "center", behavior: "smooth"});
+  }
 
-  btn.addEventListener('click', function () {
-    handleButtonClick(hiddenElement);
-  },
+  btn.addEventListener('click', handleButtonClick);
+  btnScroll.addEventListener('click', handleButtonScroll);
 
   // iMask
   $("#telephone").mask("+7 (999) 999-9999");
