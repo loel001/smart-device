@@ -1,4 +1,4 @@
-.form {
+.consultation {
   width: 100%;
   background-color: $color-second;
   background-image: url("../img/airplane-1x.png"), url("../img/polygon-5.svg"), url("../img/polygon-6.svg"), url("../img/polygon-7.svg");
@@ -15,13 +15,13 @@
   }
 }
 
-.form__wrapper {
-  max-width: 1160px;
+.consultation__wrapper {
+  max-width: 1170px;
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 114px;
 
-  @include respond-above (1279px) {
+  @include respond-above (1289px) {
     padding-right: 60px;
     padding-left: 60px;
   }
@@ -30,7 +30,7 @@
     padding-right: 90px;
     padding-left: 90px;
     padding-top: 80px;
-    padding-bottom: 114px;
+    padding-bottom: 105px;
   }
 
   @include respond-above ($breakpoints-mobile) {
@@ -42,7 +42,7 @@
   }
 }
 
-.form__block {
+.consultation__block {
   display: block;
   width: 49%;
   margin-left: auto;
@@ -52,7 +52,7 @@
   }
 }
 
-.form__block a {
+.consultation__block a {
   @include content;
   @include roboto-condensed(36px, $color-first, 400, 51px);
   margin-bottom: 10px;
@@ -70,7 +70,7 @@
   }
 }
 
-.form__block p {
+.consultation__block p {
   @include content;
   @include pt-mono(16px, $color-first, 400, 22px);
   margin-bottom: 52px;
@@ -84,7 +84,7 @@
   }
 }
 
-.form__wrap {
+.consultation__wrap {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -95,7 +95,7 @@
   }
 }
 
-.form__container {
+.consultation__container {
   width: 47%;
   display: block;
   margin-bottom: 31px;
@@ -114,7 +114,7 @@
   }
 }
 
-.form__container input {
+.consultation__container input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid transparent;
@@ -137,7 +137,7 @@
   }
 }
 
-.form__container textarea {
+.consultation__container textarea {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid transparent;
@@ -166,15 +166,15 @@
   }
 }
 
-.form__container input::placeholder {
+.consultation__container input::placeholder {
   @include pt-mono(16px, $color-first, 400, 22px);
 }
 
-.form__container textarea::placeholder {
+.consultation__container textarea::placeholder {
   @include pt-mono(16px, $color-first, 400, 22px);
 }
 
-.form__button {
+.consultation__button {
   display: block;
   width: 48%;
 
@@ -184,14 +184,14 @@
   }
 }
 
-.form__button button {
+.consultation__button button {
   display: block;
   width: 100%;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 10px;
   padding-right: 10px;
-  text-transform: uppercase;
+  text-transconsultation: uppercase;
   letter-spacing: 0.05em;
 
   @include roboto-condensed(14px, $color-first, 700, 16px);
@@ -210,7 +210,7 @@
   }
 }
 
-.form__agreement {
+.consultation__agreement {
   width: 46%;
   padding-left: 33px;
   padding-top: 10px;
@@ -221,13 +221,13 @@
   }
 }
 
-.form__agreement input {
+.consultation__agreement input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.form__agreement label {
+.consultation__agreement label {
   display: block;
   position: relative;
   cursor: pointer;
@@ -239,7 +239,7 @@
   }
 }
 
-.form__agreement input:checked + label::before {
+.consultation__agreement input:checked + label::before {
   @include icon;
   display: block;
   width: 9px;
@@ -251,7 +251,7 @@
   left: -28px;
 }
 
-.form__agreement input + label::after {
+.consultation__agreement input + label::after {
   @include icon;
   display: block;
   width: 17px;

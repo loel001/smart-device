@@ -58,9 +58,9 @@
 <main>
   <h1 class="visually-hidden">Smart Device - умные технологии</h1>
   <section class="about-company">
-    <div class="about-company__wrapper">
-      <a name="anchor" class="about-company__content">
-        <div class="about-company__advantage">
+    <div class="about-company__wrapper" name="anchor">
+      <ul class="about-company__content">
+        <li class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="29" height="35">
               <use xlink:href="#icon-stopwatch">
@@ -69,8 +69,8 @@
           <h2>Оперативные сроки</h2>
           <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
             заказы плат и комплектующих в самые короткие сроки.</p>
-        </div>
-        <div class="about-company__advantage">
+        </li>
+        <li class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="35" height="35">
               <use xlink:href="#icon-hired">
@@ -79,8 +79,8 @@
           <h2>Крупные поставщики</h2>
           <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
             Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-        </div>
-        <div class="about-company__advantage">
+        </li>
+        <li class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="36" height="31">
               <use xlink:href="#icon-detective">
@@ -88,8 +88,8 @@
           </div>
           <h2>Полная конфиденциальность</h2>
           <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-        </div>
-        <div class="about-company__advantage">
+        </li>
+        <li class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="35" height="35">
               <use xlink:href="#icon-tag">
@@ -98,8 +98,8 @@
           <h2>Персонализация стоимости</h2>
           <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
             устраивает.</p>
-        </div>
-      </a>
+        </li>
+      </ul>
       <div class="about-company__information">
         <h2>О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
@@ -115,20 +115,23 @@
   <section class="services">
     <div class="services__wrapper">
       <h2>Service Device предлагает&nbsp;следующие товары и услуги</h2>
-      <div class="services__container">
-        <a class="services__link services__link--first" href="#">
-          <h3>Производство печатных плат</h3>
-          <button type="button" aria-label="Подробнее"></button>
-        </a>
-        <a class="services__link services__link--second" href="#">
-          <h3>Монтаж печатных плат</h3>
-          <button type="button" aria-label="Подробнее"></button>
-        </a>
-        <a class="services__link services__link--third" href="#">
-          <h3>Комплектующие для светотехники</h3>
-          <button type="button" aria-label="Подробнее"></button>
-        </a>
-      </div>
+      <ul class="services__container">
+        <li class="services__link services__link--first">
+          <a href="#">
+            <h3>Производство печатных плат</h3>
+          </a>
+        </li>
+        <li class="services__link services__link--second">
+          <a href="#">
+            <h3>Монтаж печатных плат</h3>
+          </a>
+        </li>
+        <li class="services__link services__link--third">
+          <a href="#">
+            <h3>Комплектующие для светотехники</h3>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
   <section class="popup">
@@ -164,32 +167,32 @@
 
 </main>
 <footer class="page-footer">
-  <div class="page-footer__form form">
-    <div class="form__wrapper">
-      <div class="form__block">
+  <div class="page-footer__form consultation">
+    <div class="consultation__wrapper">
+      <div class="consultation__block">
         <a name="anchor-form">Остались вопросы? Задайте их нам!</a>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <div class="form__letter">
+        <div class="consultation__letter">
           <form action="https://echo.htmlacademy.ru" method="post">
-            <div class="form__wrap">
-              <div class="form__container">
+            <div class="consultation__wrap">
+              <div class="consultation__container">
                 <label for="appointment-name" class="visually-hidden">Ваше имя</label>
                 <input id="appointment-name" type="text" name="name" placeholder="Имя">
               </div>
-              <div class="form__container">
+              <div class="consultation__container">
                 <label for="telephone" class="visually-hidden">Телефон</label>
                 <input id="telephone" type="number" name="telephone" placeholder="Телефон">
               </div>
             </div>
-            <div class="form__container form__container--text">
+            <div class="consultation__container consultation__container--text">
               <label for="appointment-text" class="visually-hidden">Текст письма</label>
               <textarea id="appointment-text" name="letter" rows="4" placeholder="Ваш вопрос"></textarea>
             </div>
-            <div class="form__wrap">
-              <div class="form__button">
+            <div class="consultation__wrap">
+              <div class="consultation__button">
                 <button type="submit">Задать вопрос</button>
               </div>
-              <div class="form__agreement">
+              <div class="consultation__agreement">
                 <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="agreement"
                        checked="">
                 <label for="agreement">Я согласен на обработку персональных данных</label>
@@ -226,10 +229,10 @@
         </ul>
       </div>
       <div class="page-footer__wrapper-tablet navigation-footer">
-        <div class="navigation-footer__wrap">
-          <div class="navigation-footer__wrapper navigation-footer__wrapper--accordion">
-            <span>Разделы сайта</span>
-            <ul class="navigation-footer__list navigation-footer__list--first">
+        <div class="navigation-footer__container">
+          <div class="navigation-footer__wrapper js-accordion">
+            <h2>Разделы сайта</h2>
+            <ul class="navigation-footer__list">
               <li>
                 <a href="#">О компании</a>
               </li>
@@ -254,10 +257,9 @@
             </ul>
           </div>
         </div>
-        <div
-          class="navigation-footer__wrapper navigation-footer__wrapper--second navigation-footer__wrapper--accordion">
-          <span>Наш офис</span>
-          <ul class="navigation-footer__list navigation-footer__list--second">
+        <div class="navigation-footer__wrapper navigation-footer__wrapper--second js-accordion">
+          <h2>Наш офис</h2>
+          <ul class="navigation-footer__list">
             <li>
               <address>г. Мытищи, Олимпийский проспект, д.10</address>
             </li>
@@ -279,7 +281,6 @@
     <div class="information__wrapper">
       <ul>
         <li>Все права защищены</li>
-        <li>1999-2018 SD Service Devices</li>
         <li>Условия конфиденциальности</li>
         <li>Developed by wow studio</li>
       </ul>

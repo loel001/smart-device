@@ -1,4 +1,4 @@
-.navigation-footer__wrap {
+.navigation-footer__container {
   width: 60%;
 
   @include respond-above ($breakpoints-tablet) {
@@ -43,20 +43,21 @@
 
 .navigation-footer__list {
   @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include respond-above ($breakpoints-tablet) {
+    display: block;
+  }
 
   @include respond-above ($breakpoints-mobile) {
     margin-top: 30px;
     display: none;
   }
 
-  &--first {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @include respond-above ($breakpoints-tablet) {
-      display: block;
-    }
+  &:nth-last-of-type(1) {
+    display: block;
 
     @include respond-above ($breakpoints-mobile) {
       display: none;
@@ -64,16 +65,12 @@
   }
 }
 
-.navigation-footer__list--first li {
+.navigation-footer__list li {
   width: 48%;
 
   @include respond-above ($breakpoints-tablet) {
     width: 100%;
   }
-}
-
-.navigation-footer__list--show {
-  display: block;
 }
 
 .navigation-footer__list li {
@@ -97,7 +94,8 @@
   font-style: normal;
 }
 
-.navigation-footer__wrapper span {
+.navigation-footer__wrapper h2 {
+  @include content;
   @include roboto-condensed(15px, $color-fourth, 400, 16px);
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -117,7 +115,7 @@
   }
 }
 
-.navigation-footer__wrapper span::after {
+.navigation-footer__wrapper h2::after {
   @include respond-above ($breakpoints-mobile) {
     display: block;
     position: absolute;
@@ -130,7 +128,7 @@
   }
 }
 
-.navigation-footer__wrapper--accordion span::before {
+.js-accordion h2::before {
   @include respond-above ($breakpoints-mobile) {
     display: block;
     position: absolute;
@@ -141,4 +139,8 @@
     background-color: #c4c4c4;
     content: "";
   }
+}
+
+.show {
+  display: block;
 }

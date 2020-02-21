@@ -4,12 +4,12 @@
 }
 
 .services__wrapper {
-  max-width: 1160px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-top: 85px;
   padding-bottom: 127px;
 
-  @include respond-above (1279px) {
+  @include respond-above (1289px) {
     padding-right: 60px;
     padding-left: 60px;
   }
@@ -43,13 +43,15 @@
   @include respond-above ($breakpoints-mobile) {
     margin-bottom: 40px;
     font-size: 28px;
-    padding-right: 0;
     line-height: 39px;
     padding-left: 10px;
+    padding-right: 0;
   }
 }
 
 .services__container {
+  @include list;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -63,25 +65,25 @@
   background-color: $color-sixth;
   padding-top: 53px;
   padding-left: 45px;
-  padding-right: 53px;
-  padding-bottom: 510px;
+  padding-right: 63px;
+  padding-bottom: 53px;
   position: relative;
   cursor: pointer;
   width: 32%;
+  height: 623px;
 
   @include respond-above ($breakpoints-tablet) {
     width: 100%;
     padding-top: 40px;
-    padding-bottom: 156px;
+    padding-bottom: 40px;
     padding-left: 45px;
-    padding-right: 45px;
+    height: 256px;
   }
 
   @include respond-above ($breakpoints-mobile) {
     padding-top: 23px;
     padding-left: 35px;
-    padding-right: 35px;
-    padding-bottom: 173px;
+    padding-bottom: 23px;
   }
 
   &--first {
@@ -99,6 +101,14 @@
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/production-tablet-2x.png");
+      }
+    }
+
+    @include respond-above ($breakpoints-mobile) {
+      background-image: url("../img/production-mobile-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/production-mobile-2x.png");
       }
     }
   }
@@ -120,6 +130,14 @@
         background-image: url("../img/mounting-tablet-2x.png");
       }
     }
+
+    @include respond-above ($breakpoints-mobile) {
+      background-image: url("../img/mounting-mobile-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mounting-mobile-2x.png");
+      }
+    }
   }
 
   &--third {
@@ -139,6 +157,28 @@
         background-image: url("../img/complete-tablet-2x.png");
       }
     }
+
+    @include respond-above ($breakpoints-mobile) {
+      background-image: url("../img/complete-mobile-1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/complete-mobile-2x.png");
+      }
+    }
+  }
+
+  &::after {
+    @include icon;
+    display: block;
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    background-image: url("../img/right.svg");
+    background-size: 6px 9px;
+    background-position: 30px 27px;
+    background-color: $color-second;
+    bottom: 0;
+    right: 0;
   }
 
   &:hover {
@@ -168,27 +208,6 @@
   max-width: 165px;
 }
 
-.services__link button {
-  display: block;
-  padding: 0;
-  width: 63px;
-  height: 63px;
-  background-color: $color-second;
-  border: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-.services__link button::before {
-  @include icon;
-  display: block;
-  position: relative;
-  width: 6px;
-  height: 9px;
-  background-image: url("../img/right.svg");
-  background-size: 6px 9px;
-  top: 0;
-  left: 30px;
+.services__link a {
+  @include roboto-condensed(20px, $color-first, 400);
 }

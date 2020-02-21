@@ -219,13 +219,6 @@
 
 .page-header__picture {
   display: block;
-}
-
-.page-header__picture img {
-  display: block;
-  width: 705px;
-  height: 515px;
-  background-color: transparent;
   position: absolute;
   right: -81px;
   top: 254px;
@@ -235,16 +228,28 @@
   }
 
   @include respond-above (1247px) {
-    width: 260px;
-    height: 340px;
     top: 113px;
     right: 0;
   }
 
   @include respond-above ($breakpoints-mobile) {
-    width: 301px;
-    height: 220px;
     right: -20px;
     top: 92px;
+  }
+}
+
+.page-header__picture img {
+  display: block;
+  width: 705px;
+  height: 515px;
+
+  @include respond-above (1247px) {
+    width: 260px;
+    height: 340px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    width: 301px;
+    height: 220px;
   }
 }

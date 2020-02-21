@@ -21,10 +21,6 @@
   background-color: $color-first;
 }
 
-.information__wrapper {
-  @include wrapper;
-}
-
 .page-footer__wrapper-desktop {
   max-width: 1410px;
   margin: 0 auto;
@@ -41,6 +37,10 @@
     padding-right: 0;
     padding-left: 0;
     display: block;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    padding-top: 45px;
   }
 }
 
@@ -64,11 +64,7 @@
 }
 
 .page-footer__social {
-  padding-top: 65px;
-  padding-bottom: 65px;
-
   @include respond-above ($breakpoints-tablet) {
-    padding-top: 20px;
     padding-bottom: 25px;
     width: 100%;
     background-color: $color-first;
@@ -76,7 +72,6 @@
   }
 
   @include respond-above ($breakpoints-mobile) {
-    padding-top: 45px;
     padding-bottom: 55px;
   }
 }
