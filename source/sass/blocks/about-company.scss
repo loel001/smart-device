@@ -292,14 +292,15 @@
 }
 
 .about-company__information a {
+  display: inline-block;
   border-radius: 5px;
   border: 1px solid $color-second;
-  width: 180px;
   padding-top: 14px;
   padding-bottom: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   letter-spacing: 0.05em;
+  max-width: 290px;
 
   @include roboto-condensed(14px, $color-second, 700, 16px);
   text-transform: uppercase;
