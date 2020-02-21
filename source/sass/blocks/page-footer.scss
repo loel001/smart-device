@@ -1,11 +1,13 @@
 .page-footer {
   width: 100%;
+  position: relative;
 }
 
 .page-footer__wrap {
   width: 100%;
   background-color: $color-first;
   border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+  overflow: hidden;
 }
 
 .page-footer__navigation {
@@ -22,25 +24,22 @@
 }
 
 .page-footer__wrapper-desktop {
-  max-width: 1410px;
-  margin: 0 auto;
+  @include wrapper;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  @include respond-above (1489px) {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+  padding-top: 63px;
+  margin-bottom: 58px;
 
   @include respond-above ($breakpoints-tablet) {
-    padding-right: 0;
-    padding-left: 0;
-    display: block;
+    padding-top: 20px;
+    margin-bottom: 0;
   }
 
   @include respond-above ($breakpoints-mobile) {
     padding-top: 45px;
+    margin-bottom: 0;
   }
 }
 
@@ -51,27 +50,39 @@
   width: 70%;
 
   @include respond-above ($breakpoints-tablet) {
-    padding-right: 25px;
-    padding-left: 25px;
     width: 100%;
+    margin-top: 63px;
+    margin-bottom: 36px;
   }
 
   @include respond-above ($breakpoints-mobile) {
-    padding-right: 0;
-    padding-left: 0;
     display: block;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .page-footer__social {
   @include respond-above ($breakpoints-tablet) {
-    padding-bottom: 25px;
-    width: 100%;
-    background-color: $color-first;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    position: relative;
+
+    &::after {
+      @include icon;
+
+      width: 100vw;
+      height: 1px;
+      display: block;
+      position: absolute;
+      background-color: rgba(98, 105, 98, 0.2);
+      left: -25px;
+      bottom: -26px;
+    }
   }
 
   @include respond-above ($breakpoints-mobile) {
-    padding-bottom: 55px;
+    &::after {
+      left: -15px;
+      bottom: -55px;
+    }
   }
 }

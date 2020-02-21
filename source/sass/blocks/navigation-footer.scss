@@ -12,31 +12,44 @@
 }
 
 .navigation-footer__wrapper {
-  padding-top: 65px;
-  padding-bottom: 55px;
+  width: 60%;
 
   @include respond-above ($breakpoints-tablet) {
-    padding-top: 38px;
-    padding-bottom: 33px;
+    width: 48%;
   }
 
   @include respond-above ($breakpoints-mobile) {
-    min-width: 320px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.navigation-footer__wrapper:last-child {
+  width: 34%;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 48%;
   }
 
-  &--second {
-    width: 34%;
+  @include respond-above ($breakpoints-mobile) {
+    width: 100%;
+  }
+}
 
-    @include respond-above ($breakpoints-tablet) {
-      width: 48%;
-    }
-
+.navigation-footer__wrapper:not(:last-child) {
+  &::after {
     @include respond-above ($breakpoints-mobile) {
-      width: 100%;
+      @include icon;
+
+      width: 100vw;
+      height: 1px;
+      display: block;
+      position: absolute;
+      background-color: rgba(98,105,98,.2);
+      left: -15px;
+      bottom: 0;
     }
   }
 }
@@ -55,27 +68,20 @@
     margin-top: 30px;
     display: none;
   }
-
-  &:nth-last-of-type(1) {
-    display: block;
-
-    @include respond-above ($breakpoints-mobile) {
-      display: none;
-    }
-  }
 }
 
-.navigation-footer__list li {
-  width: 48%;
-
-  @include respond-above ($breakpoints-tablet) {
-    width: 100%;
-  }
+.navigation-footer__wrapper:last-child .navigation-footer__list {
+  flex-direction: column;
 }
 
 .navigation-footer__list li {
   @include pt-mono(15px, rgba(27, 45, 55, 0.5), 400, 25px);
   cursor: pointer;
+  width: 49%;
+
+  @include respond-above ($breakpoints-tablet) {
+    width: 100%;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -84,6 +90,10 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.navigation-footer__wrapper:last-child .navigation-footer__list li {
+  width: 100%;
 }
 
 .navigation-footer__list li a {

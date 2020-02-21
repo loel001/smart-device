@@ -6,16 +6,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
     align-items: center;
   }
 
   @include respond-above ($breakpoints-mobile) {
     display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: 320px;
+    margin-bottom: 55px;
   }
 }
 
@@ -50,8 +46,12 @@
   letter-spacing: 0.04em;
   display: block;
   position: absolute;
-  bottom: 10px;
-  left: 100px;
+  bottom: 14px;
+  left: calc(50vw - 485px);
+
+  @include respond-above (1409px) {
+    left: calc(50vw - 285px);
+  }
 
   @include respond-above ($breakpoints-tablet) {
     width: 235px;
