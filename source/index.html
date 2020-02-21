@@ -39,7 +39,7 @@
     <div class="page-header__container">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a href="#anchor-form">
+      <a class="page-header__anchor">
         <span>Получить бесплатную консультацию</span>
         <span>Бесплатная консультация</span>
       </a>
@@ -52,13 +52,13 @@
              width="294" height="220" alt="Печатная плата">
       </picture>
     </div>
-    <a class="page-header__scroll" href="#anchor">Скролл вниз</a>
+    <a class="page-header__scroll">Скролл вниз</a>
   </div>
 </header>
 <main>
   <h1 class="visually-hidden">Smart Device - умные технологии</h1>
   <section class="about-company">
-    <div class="about-company__wrapper" name="anchor">
+    <div class="about-company__wrapper">
       <ul class="about-company__content">
         <li class="about-company__advantage">
           <div class="about-company__icon">
@@ -170,7 +170,7 @@
   <div class="page-footer__form consultation">
     <div class="consultation__wrapper">
       <div class="consultation__block">
-        <a name="anchor-form">Остались вопросы? Задайте их нам!</a>
+        <a>Остались вопросы? Задайте их нам!</a>
         <p>Мы проконсультируем Вас бесплатно</p>
         <div class="consultation__letter">
           <form action="https://echo.htmlacademy.ru" method="post">
@@ -181,7 +181,7 @@
               </div>
               <div class="consultation__container">
                 <label for="telephone" class="visually-hidden">Телефон</label>
-                <input id="telephone" type="number" name="telephone" placeholder="Телефон">
+                <input id="telephone" type="text" name="telephone" placeholder="Телефон">
               </div>
             </div>
             <div class="consultation__container consultation__container--text">
@@ -194,7 +194,7 @@
               </div>
               <div class="consultation__agreement">
                 <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="agreement"
-                       checked="">
+                       checked="" required>
                 <label for="agreement">Я согласен на обработку персональных данных</label>
               </div>
             </div>
@@ -285,7 +285,8 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/vendor.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+  // accordion-footer
   const MOBILE_WIDTH = 768;
   const accordionTittle = document.querySelectorAll('.navigation-footer__wrapper h2');
   const modifiedAccordionIittle = Array.prototype.slice.call(accordionTittle);
@@ -33,4 +34,36 @@
       });
     });
   }
+
+  // scroll
+  const hiddenElement = document.querySelector(".consultation__block a");
+  const btn = document.querySelector(".page-header__anchor");
+  const hiddenElementScroll = document.querySelector(".about-company");
+  const btnScroll = document.querySelector(".page-header__scroll");
+
+  // let handleButtonClick = function (el) {
+  //   el.scrollIntoView({block: "center", behavior: "smooth"});
+  // };
+  //
+  // btn.addEventListener("click", function () {
+  //   console.log(1);
+  //   el.scrollIntoView({block: "center", behavior: "smooth"});
+  //   handleButtonClick(hiddenElement);
+  // });
+  //
+  // btnScroll.addEventListener("click", function () {
+  //   console.log(1);
+  //   handleButtonClick(hiddenElementScroll);
+  // });
+
+  let handleButtonClick = function(element) {
+    element.scrollIntoView({block: "center", behavior: "smooth"});
+  };
+
+  btn.addEventListener('click', function () {
+    handleButtonClick(hiddenElement);
+  },
+
+  // iMask
+  $("#telephone").mask("+7 (999) 999-9999");
 })();

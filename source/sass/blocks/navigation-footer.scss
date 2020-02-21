@@ -152,5 +152,7 @@
 }
 
 .show {
-  display: block;
+  @include respond-above ($breakpoints-mobile) {
+    display: block;
+  }
 }
