@@ -2,6 +2,7 @@
 
 (function () {
   // accordion-footer
+
   const MOBILE_WIDTH = 768;
   const accordionTittle = document.querySelectorAll('.navigation-footer__wrapper h2');
   const modifiedAccordionIittle = Array.prototype.slice.call(accordionTittle);
@@ -49,27 +50,19 @@
 
 
   const letterButton = document.querySelector('.navigation__button');
-  const popup = document.querySelector('.popup');
+  const popup = document.querySelector('.letter');
   const surname = document.getElementById('name');
-  const telephoneNumber = document.getElementById('.telephone-number');
+  const telephoneNumber = document.getElementById('telephone-number');
   const close = document.querySelector('.popup__wrapper button');
-  const appeal = document.getElementById('.question');
+  const appeal = document.getElementById('question');
   const form = document.querySelector('.popup__letter form');
-  let isStorageSupport = true;
+  const letterWrapper = document.querySelector('.popup');
   let storage = "";
-  const body = document.querySelector('body');
-
-  try {
-    storage = localStorage.getItem("surname");
-  } catch (err) {
-    isStorageSupport = false;
-  }
 
   if (letterButton) {
     letterButton.addEventListener("click", function (evt) {
       evt.preventDefault();
-      popup.classList.add('popup--show');
-      body.classList.add('popup-lettter');
+      popup.classList.add('letter--show');
 
       if (storage) {
         surname.value = storage;
@@ -83,28 +76,22 @@
   if (close) {
     close.addEventListener("click", function (evt) {
       evt.preventDefault();
-      popup.classList.remove('popup--show');
-      body.classList.remove('popup-lettter');
-      if (popup.classList.contains('popup--error') === true) {
-        popup.classList.remove('popup--error');
+      popup.classList.remove('letter--show');
+      if (letterWrapper.classList.contains('popup--error') === true) {
+        letterWrapper.classList.remove('popup--error');
       }
-
     });
   }
 
   if (form) {
     form.addEventListener("submit", function (evt) {
-      if (!surname.value || !telephoneNumber.value || !appeal.value) {
+      if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || !appeal.value) {
         evt.preventDefault();
-        popup.classList.add('popup--error');
-        console.log(1);
+        letterWrapper.classList.add('popup--error');
       } else {
-        if (isStorageSupport) {
-          localStorage.setItem('surname', surname.value);
-          localStorage.setItem('telephoneNumber', telephoneNumber.value);
-          localStorage.setItem('appeal', appeal.value);
-          console.log(2);
-        }
+        localStorage.setItem('surname', surname.value);
+        localStorage.setItem('telephoneNumber', telephoneNumber.value);
+        localStorage.setItem('appeal', appeal.value);
       }
     });
   }
@@ -113,11 +100,10 @@
     if (evt.keyCode === 27) {
       evt.preventDefault();
       if (popup) {
-        if (popup.classList.contains('popup--show')) {
-          popup.classList.remove('popup--show');
-          body.classList.remove('popup-lettter');
-          if (popup.classList.contains('popup--error') === true) {
-            popup.classList.remove('popup--error');
+        if (popup.classList.contains('letter--show')) {
+          popup.classList.remove('letter--show');
+          if (letterWrapper.classList.contains('popup--error') === true) {
+            letterWrapper.classList.remove('popup--error');
           }
         }
       }

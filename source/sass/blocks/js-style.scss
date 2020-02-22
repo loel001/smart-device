@@ -9,24 +9,32 @@
 }
 
 @keyframes shake {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
+  0% {
+    transform: rotate(0deg) scaleY(0.6);
   }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translate(-49%, -50%);
+  20% {
+    transform: rotate(-2deg) scaleY(1.05);
   }
 
-  20%,
-  40%,
-  60%,
+  35% {
+    transform: rotate(2deg) scaleY(1);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  65% {
+    transform: rotate(1deg);
+  }
+
   80% {
-    transform: translate(-51%, -50%);
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -51,8 +59,10 @@
   }
 }
 
-.popup--show {
-  display: block;
+.letter--show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: bounce 0.8s;
 
   @include respond-above($breakpoints-tablet) {
@@ -61,25 +71,10 @@
 }
 
 .popup--error {
-  animation: shake 0.6s;
-}
-
-.popup-lettter {
-  position: relative;
-
-  &::before {
-    @include icon;
-
-    background-color: rgba(0, 0, 15, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-
-    @include respond-above($breakpoints-tablet) {
-      display: none;
-    }
-  }
+  animation: hatch 0.8s;
+  // animation-name: hatch;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-in-out;
+  // transform-origin: 50% 100%;
+  // visibility: visible;
 }
