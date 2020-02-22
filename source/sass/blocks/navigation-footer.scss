@@ -19,8 +19,6 @@
   }
 
   @include respond-above ($breakpoints-mobile) {
-    padding-top: 28px;
-    padding-bottom: 28px;
     position: relative;
     width: 100%;
   }
@@ -118,6 +116,8 @@
     padding-right: 20px;
     position: relative;
     cursor: pointer;
+    padding-top: 28px;
+    padding-bottom: 28px;
 
     &:active {
       opacity: 0.5;
@@ -133,26 +133,7 @@
     height: 1px;
     background-color: #c4c4c4;
     right: 0;
-    top: 7px;
+    top: 35px;
     content: "";
-  }
-}
-
-.js-accordion h2::before {
-  @include respond-above ($breakpoints-mobile) {
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 16px;
-    right: 7px;
-    top: 0;
-    background-color: #c4c4c4;
-    content: "";
-  }
-}
-
-.show {
-  @include respond-above ($breakpoints-mobile) {
-    display: block;
   }
 }

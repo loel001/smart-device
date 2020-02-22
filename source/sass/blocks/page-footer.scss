@@ -23,7 +23,7 @@
   background-color: $color-first;
 }
 
-.page-footer__wrapper-desktop {
+.page-footer__container {
   @include wrapper;
 
   display: flex;
@@ -43,7 +43,7 @@
   }
 }
 
-.page-footer__wrapper-tablet {
+.page-footer__navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

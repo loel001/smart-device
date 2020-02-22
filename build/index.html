@@ -38,7 +38,7 @@
     <div class="page-header__container">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="page-header__anchor">
+      <a onclick="$('#scroll-letter').animatescroll({scrollSpeed:4000,easing:'easeOutCubic'});">
         <span>Получить бесплатную консультацию</span>
         <span>Бесплатная консультация</span>
       </a>
@@ -50,14 +50,14 @@
         <img src="img/pay-mobile.png" srcset="img/pay-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата">
       </picture>
     </div>
-    <a class="page-header__scroll">Скролл вниз</a>
+    <a class="page-header__scroll" onclick="$('#scroll').animatescroll({scrollSpeed:2000,easing:'easeOutCubic'});">Скролл вниз</a>
   </div>
 </header>
 <main>
   <h1 class="visually-hidden">Smart Device - умные технологии</h1>
-  <section class="about-company">
+  <section class="about-company" id="scroll">
     <div class="about-company__wrapper">
-      <ul class="about-company__content">
+      <ul class="about-company__list">
         <li class="about-company__advantage">
           <div class="about-company__icon">
             <svg width="29" height="35">
@@ -113,20 +113,35 @@
   <section class="services">
     <div class="services__wrapper">
       <h2>Service Device предлагает&nbsp;следующие товары и услуги</h2>
-      <ul class="services__container">
+      <ul class="services__links">
         <li class="services__link services__link--first">
           <a href="#">
             <h3>Производство печатных плат</h3>
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/production-desktop-1x.png 1x, img/production-desktop-2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/production-tablet-1x.png 1x, img/production-tablet-2x.png 2x">
+              <img width="290" height="256" src="img/production-mobile-1x.png" srcset="img/production-mobile-2x.png 2x" alt="Производство печатных плат">
+            </picture>
           </a>
         </li>
         <li class="services__link services__link--second">
           <a href="#">
             <h3>Монтаж печатных плат</h3>
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/mounting-desktop-1x.png 1x, img/mounting-desktop-2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/mounting-tablet-1x.png 1x, img/mounting-tablet-2x.png 2x">
+              <img width="290" height="256" src="img/mounting-mobile-1x.png" srcset="img/mounting-mobile-2x.png 2x" alt="Монтаж печатных плат">
+            </picture>
           </a>
         </li>
         <li class="services__link services__link--third">
           <a href="#">
             <h3>Комплектующие для светотехники</h3>
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/complete-desktop-1x.png 1x, img/complete-desktop-2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/complete-tablet-1x.png 1x, img/complete-tablet-2x.png 2x">
+              <img width="290" height="256" src="img/complete-mobile-1x.png" srcset="img/complete-mobile-2x.png 2x" alt="Комплектующие для светотехники">
+            </picture>
           </a>
         </li>
       </ul>
@@ -134,37 +149,38 @@
   </section>
   <section class="popup">
     <div class="popup__wrapper">
+      <button type="button" aria-label="Закрыть"></button>
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <div class="popup__write-to-us">
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="popup__name">
-            <label for="name" class="visually-hidden">Ваше имя</label>
-            <input id="name" type="text" name="name" placeholder="Имя">
-          </div>
-          <div class="popup__telephone-number">
-            <label for="telephone-number" class="visually-hidden">Телефон</label>
-            <input id="telephone-number" type="number" name="telephone" placeholder="Телефон">
-          </div>
-          <div class="popup__question">
-            <label for="question" class="visually-hidden">Текст письма</label>
-            <textarea id="question" name="question" rows="7" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <div class="popup__button">
-            <button type="submit">Отправить</button>
-          </div>
-          <div class="popup__agreement">
-            <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="processing-agreement" checked="">
-            <label for="processing-agreement">Я согласен на обработку персональных данных</label>
-          </div>
-        </form>
-      </div>
+    </div>
+    <div class="popup__letter">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="popup__container">
+          <label for="name" class="visually-hidden">Ваше имя</label>
+          <input id="name" type="text" name="name" placeholder="Имя" required="">
+        </div>
+        <div class="popup__container">
+          <label for="telephone-number" class="visually-hidden">Телефон</label>
+          <input id="telephone-number" type="text" name="telephone" placeholder="Телефон" required="">
+        </div>
+        <div class="popup__container popup__container--text">
+          <label for="question" class="visually-hidden">Текст письма</label>
+          <textarea id="question" name="question" rows="3" placeholder="Ваш вопрос" required=""></textarea>
+        </div>
+        <div class="popup__button">
+          <button type="submit">Отправить</button>
+        </div>
+        <div class="popup__agreement">
+          <input type="checkbox" name="agreement" value="personal-data-processing-agreement" id="processing-agreement" checked="" required="">
+          <label for="processing-agreement">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
     </div>
   </section>
 
 </main>
 <footer class="page-footer">
-  <div class="page-footer__form consultation">
+  <div class="page-footer__form consultation" id="scroll-letter">
     <div class="consultation__wrapper">
       <div class="consultation__block">
         <a>Остались вопросы? Задайте их нам!</a>
@@ -174,16 +190,16 @@
             <div class="consultation__wrap">
               <div class="consultation__container">
                 <label for="appointment-name" class="visually-hidden">Ваше имя</label>
-                <input id="appointment-name" type="text" name="name" placeholder="Имя">
+                <input id="appointment-name" type="text" name="name" placeholder="Имя" required="">
               </div>
               <div class="consultation__container">
                 <label for="telephone" class="visually-hidden">Телефон</label>
-                <input id="telephone" type="text" name="telephone" placeholder="Телефон">
+                <input id="telephone" type="text" name="telephone" placeholder="Телефон" required="">
               </div>
             </div>
             <div class="consultation__container consultation__container--text">
               <label for="appointment-text" class="visually-hidden">Текст письма</label>
-              <textarea id="appointment-text" name="letter" rows="4" placeholder="Ваш вопрос"></textarea>
+              <textarea id="appointment-text" name="letter" rows="4" placeholder="Ваш вопрос" required=""></textarea>
             </div>
             <div class="consultation__wrap">
               <div class="consultation__button">
@@ -200,7 +216,7 @@
     </div>
   </div>
   <div class="page-footer__wrap">
-    <div class="page-footer__wrapper-desktop">
+    <div class="page-footer__container">
       <div class="page-footer__social social">
         <a class="social__logo">
           <img width="216" height="52" src="img/logo-footer.svg" alt="Логотип Smart Device">
@@ -224,7 +240,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__wrapper-tablet navigation-footer">
+      <div class="page-footer__navigation navigation-footer">
         <div class="navigation-footer__wrapper js-accordion">
           <h2>Разделы сайта</h2>
           <ul class="navigation-footer__list">

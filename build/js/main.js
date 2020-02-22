@@ -36,22 +36,92 @@
   }
 
   // scroll
-  const hiddenElement = document.querySelector(".consultation__block a");
-  const btn = document.querySelector(".page-header__anchor");
-  const hiddenElementScroll = document.querySelector(".about-company");
-  const btnScroll = document.querySelector(".page-header__scroll");
-
-  function handleButtonClick() {
-    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
-  }
-
-  function handleButtonScroll() {
-    hiddenElementScroll.scrollIntoView({block: "center", behavior: "smooth"});
-  }
-
-  btn.addEventListener('click', handleButtonClick);
-  btnScroll.addEventListener('click', handleButtonScroll);
+  $('body').animatescroll();
 
   // iMask
-  $("#telephone").mask("+7 (999) 999-9999");
+
+  $(document).ready(function () {
+    $("#telephone").inputmask("+7 (999)-999-9999", {showMaskOnFocus: true});
+    $("#telephone-number").inputmask("+7 (999)-999-9999", {showMaskOnFocus: true});
+  });
+
+  // Popup-desktop
+
+
+  const letterButton = document.querySelector('.navigation__button');
+  const popup = document.querySelector('.popup');
+  const surname = document.getElementById('name');
+  const telephoneNumber = document.getElementById('.telephone-number');
+  const close = document.querySelector('.popup__wrapper button');
+  const appeal = document.getElementById('.question');
+  const form = document.querySelector('.popup__letter form');
+  let isStorageSupport = true;
+  let storage = "";
+  const body = document.querySelector('body');
+
+  try {
+    storage = localStorage.getItem("surname");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  if (letterButton) {
+    letterButton.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add('popup--show');
+      body.classList.add('popup-lettter');
+
+      if (storage) {
+        surname.value = storage;
+        telephoneNumber.focus();
+      } else {
+        surname.focus();
+      }
+    });
+  }
+
+  if (close) {
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove('popup--show');
+      body.classList.remove('popup-lettter');
+      if (popup.classList.contains('popup--error') === true) {
+        popup.classList.remove('popup--error');
+      }
+
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", function (evt) {
+      if (!surname.value || !telephoneNumber.value || !appeal.value) {
+        evt.preventDefault();
+        popup.classList.add('popup--error');
+        console.log(1);
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('surname', surname.value);
+          localStorage.setItem('telephoneNumber', telephoneNumber.value);
+          localStorage.setItem('appeal', appeal.value);
+          console.log(2);
+        }
+      }
+    });
+  }
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup) {
+        if (popup.classList.contains('popup--show')) {
+          popup.classList.remove('popup--show');
+          body.classList.remove('popup-lettter');
+          if (popup.classList.contains('popup--error') === true) {
+            popup.classList.remove('popup--error');
+          }
+        }
+      }
+    }
+  });
+
 })();

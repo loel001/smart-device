@@ -28,7 +28,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 1092px;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   @include respond-above($breakpoints-desktop-wide) {
     width: 73%;
@@ -36,6 +36,7 @@
 
   @include respond-above($breakpoints-tablet) {
     width: 158px;
+    justify-content: space-between;
   }
 
   @include respond-above($breakpoints-mobile) {
@@ -51,6 +52,7 @@
   background-color: transparent;
   cursor: pointer;
   position: relative;
+  margin-right: auto;
 
   &::before {
     @include pseudo(block, absolute);
@@ -206,8 +208,8 @@
   align-items: center;
   width: 662px;
 
-  @include respond-above($breakpoints-desktop-wide) {
-    width: 85%;
+  @include respond-above(1100px) {
+    width: 610px;
   }
 
   @include respond-above($breakpoints-tablet) {
