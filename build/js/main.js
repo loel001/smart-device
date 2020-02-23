@@ -85,9 +85,16 @@
 
   if (form) {
     form.addEventListener("submit", function (evt) {
-      if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || !appeal.value) {
+      if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || telephoneNumber.value.length == 0 || !appeal.value) {
         evt.preventDefault();
-        letterWrapper.classList.add('popup--error');
+
+        if (letterWrapper.classList.contains('popup--error') === true) {
+          letterWrapper.classList.remove('popup--error');
+        }
+        // letterWrapper.classList.add('popup--error');
+        // letterWrapper.classList.remove('popup--error');
+        // letterWrapper.offsetWidth = letterWrapper.offsetWidth;
+        letterWrapper.classList.add("popup--error");
       } else {
         localStorage.setItem('surname', surname.value);
         localStorage.setItem('telephoneNumber', telephoneNumber.value);
