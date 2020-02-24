@@ -11,7 +11,7 @@
 @keyframes shake {
   0%,
   100% {
-    margin: 0 auto;
+    margin-left: 0;
   }
 
   10%,
@@ -19,14 +19,14 @@
   50%,
   70%,
   90% {
-    margin-left: calc(50vw - 245px);
+    margin-left: -3px;
   }
 
   20%,
   40%,
   60%,
   80% {
-    margin-left: calc(50vw - 242px);
+    margin-left: 3px;
   }
 }
 

@@ -80,10 +80,6 @@
       evt.preventDefault();
       popup.classList.remove('letter--show');
       wrapper.classList.remove('hide');
-      // letterWrapper.classList.toggle('popup--error');
-      if (letterWrapper.classList.contains('popup--error') === true) {
-        letterWrapper.classList.remove('popup--error');
-      }
     });
   }
 
@@ -91,14 +87,10 @@
     form.addEventListener("submit", function (evt) {
       if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || telephoneNumber.value.length == 0 || !appeal.value) {
         evt.preventDefault();
-        // if (letterWrapper.classList.contains('popup--error') === true) {
-        //   letterWrapper.classList.remove('popup--error');
-        // }
-        // letterWrapper.classList.add('popup--error');
-        letterWrapper.classList.toggle('popup--error');
-        if (letterWrapper.classList.contains('popup--error') === false) {
-          letterWrapper.classList.add('popup--error');
-        }
+        letterWrapper.classList.add('popup--error');
+        setTimeout(function() {
+          letterWrapper.classList.remove('popup--error');
+        }, 1000);
       } else {
         localStorage.setItem('surname', surname.value);
         localStorage.setItem('telephoneNumber', telephoneNumber.value);
@@ -114,10 +106,6 @@
         if (popup.classList.contains('letter--show')) {
           wrapper.classList.remove('hide');
           popup.classList.remove('letter--show');
-          // letterWrapper.classList.remove('popup--error');
-          if (letterWrapper.classList.contains('popup--error') === true) {
-            letterWrapper.classList.remove('popup--error');
-          }
         }
       }
     }

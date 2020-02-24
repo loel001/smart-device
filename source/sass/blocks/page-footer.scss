@@ -10,14 +10,6 @@
   overflow: hidden;
 }
 
-.page-footer__navigation {
-  @include respond-above ($breakpoints-mobile) {
-    width: 100%;
-    background-color: $color-first;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
-  }
-}
-
 .page-footer__information {
   width: 100%;
   background-color: $color-first;

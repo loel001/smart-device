@@ -28,7 +28,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 1092px;
-  justify-content: flex-end;
 
   @include respond-above($breakpoints-desktop-wide) {
     width: 73%;
