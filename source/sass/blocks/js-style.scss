@@ -56,6 +56,8 @@
   align-items: center;
   justify-content: center;
   animation: bounce 0.8s;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   @include respond-above($breakpoints-tablet) {
     display: none;
@@ -64,4 +66,8 @@
 
 .popup--error {
   animation: shake 0.8s;
+}
+
+.hide {
+  overflow: hidden;
 }

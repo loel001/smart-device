@@ -58,11 +58,13 @@
   const form = document.querySelector('.popup__letter form');
   const letterWrapper = document.querySelector('.popup');
   let storage = "";
+  const wrapper = document.querySelector('body');
 
   if (letterButton) {
     letterButton.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.add('letter--show');
+      wrapper.classList.add('hide');
 
       if (storage) {
         surname.value = storage;
@@ -77,6 +79,8 @@
     close.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.remove('letter--show');
+      wrapper.classList.remove('hide');
+      // letterWrapper.classList.toggle('popup--error');
       if (letterWrapper.classList.contains('popup--error') === true) {
         letterWrapper.classList.remove('popup--error');
       }
@@ -87,10 +91,11 @@
     form.addEventListener("submit", function (evt) {
       if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || telephoneNumber.value.length == 0 || !appeal.value) {
         evt.preventDefault();
-        if (letterWrapper.classList.contains('popup--error') === true) {
-          letterWrapper.classList.remove('popup--error');
-        }
-        letterWrapper.classList.add('popup--error');
+        // if (letterWrapper.classList.contains('popup--error') === true) {
+        //   letterWrapper.classList.remove('popup--error');
+        // }
+        // letterWrapper.classList.add('popup--error');
+        letterWrapper.classList.toggle('popup--error');
       } else {
         localStorage.setItem('surname', surname.value);
         localStorage.setItem('telephoneNumber', telephoneNumber.value);
@@ -104,7 +109,9 @@
       evt.preventDefault();
       if (popup) {
         if (popup.classList.contains('letter--show')) {
+          wrapper.classList.remove('hide');
           popup.classList.remove('letter--show');
+          // letterWrapper.classList.remove('popup--error');
           if (letterWrapper.classList.contains('popup--error') === true) {
             letterWrapper.classList.remove('popup--error');
           }
