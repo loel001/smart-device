@@ -98,7 +98,7 @@
 .consultation__container {
   width: 47%;
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
 
   &--text {
     width: 100%;
@@ -114,17 +114,34 @@
   }
 }
 
+.consultation__wrap .consultation__container {
+  margin-bottom: 43px;
+
+  @include respond-above ($breakpoints-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include respond-above ($breakpoints-mobile) {
+    margin-bottom: 30px;
+  }
+}
+
 .consultation__container input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid transparent;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  padding-right: 15px;
+  padding-left: 18px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 18px;
   cursor: pointer;
+  border-radius: 0;
 
   @include pt-mono(16px, $color-first, 400, 22px);
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-bottom: 20px;
+  }
 
   &:hover {
     border: 1px solid $color-first;
@@ -132,7 +149,7 @@
   }
 
   &:focus {
-    border: 1px solid $color-first;
+    outline: 1px solid $color-first;
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
@@ -141,13 +158,18 @@
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid transparent;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  padding-right: 15px;
+  padding-left: 18px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 18px;
   cursor: pointer;
   resize: none;
-  height: 167px;
+  height: 160px;
+  border-radius: 0;
+
+  @include respond-above ($breakpoints-tablet) {
+    height: 164px;
+  }
 
   @include pt-mono(16px, $color-first, 400, 22px);
 
@@ -161,7 +183,7 @@
   }
 
   &:focus {
-    border: 1px solid $color-first;
+    outline: 1px solid $color-first;
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
@@ -208,6 +230,11 @@
   &:active {
     opacity: 0.5;
   }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .consultation__agreement {
@@ -225,6 +252,10 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .consultation__agreement label {
@@ -236,6 +267,11 @@
 
   &:hover {
     opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -260,4 +296,13 @@
   border: 1px solid $color-first;
   top: 0;
   left: -33px;
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.consultation__agreement input:focus + label::after {
+  background-color: rgba(255, 255, 255, 0.2);
 }

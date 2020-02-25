@@ -199,10 +199,14 @@
   @include pt-mono(14px, rgba(255, 255, 255, 0.5), 400, 16px);
   content: "";
   bottom: 127px;
-  left: 0;
+  left: -40px;
   transform: rotate(-90deg);
   padding: 0;
   cursor: pointer;
+
+  @include respond-above (1489px) {
+    left: 0;
+  }
 
   @include respond-above ($breakpoints-tablet) {
     display: none;

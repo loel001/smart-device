@@ -11,7 +11,7 @@
 
   @include respond-above ($breakpoints-mobile) {
     display: block;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 }
 
@@ -61,7 +61,6 @@
   @include respond-above ($breakpoints-mobile) {
     text-align: center;
     margin-bottom: 30px;
-    padding-top: 0;
     width: auto;
   }
 }
@@ -73,6 +72,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 112px;
+
+  @include respond-above ($breakpoints-tablet) {
+    padding-top: 10px;
+  }
 
   @include respond-above ($breakpoints-mobile) {
     padding-top: 0;
@@ -90,4 +93,8 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.social__links li:not(:last-child) {
+  margin-bottom: 10px;
 }

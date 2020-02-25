@@ -74,7 +74,7 @@
   @include respond-above ($breakpoints-mobile) {
     &::after {
       left: -15px;
-      bottom: -55px;
+      bottom: -45px;
     }
   }
 }

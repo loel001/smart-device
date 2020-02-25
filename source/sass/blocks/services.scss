@@ -7,7 +7,7 @@
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 85px;
-  padding-bottom: 127px;
+  padding-bottom: 80px;
 
   @include respond-above (1289px) {
     padding-right: 60px;
@@ -54,7 +54,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   @include respond-above ($breakpoints-tablet) {
     display: block;
@@ -102,12 +101,18 @@
 }
 
 .services__link:not(:last-child) {
-  @include respond-above ($breakpoints-tablet) {
-    margin-bottom: 45px;
-  }
+  margin-bottom: 45px;
 
   @include respond-above ($breakpoints-mobile) {
     margin-bottom: 30px;
+  }
+}
+
+.services__link:not(:nth-child(3n + 3)) {
+  margin-right: 2%;
+
+  @include respond-above ($breakpoints-tablet) {
+    margin-right: 0;
   }
 }
 

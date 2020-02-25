@@ -21,7 +21,7 @@
         <a class="navigation__logo">
           <picture>
             <source media="(min-width: 768px)" srcset="img/logo.svg">
-            <img width="38" height="38" src="img/logo-mobile.svg" alt="Логотип Smart Device">
+            <img width="38" height="38" data-src="img/logo-mobile.svg" alt="Логотип Smart Device" class="lazyload">
           </picture>
         </a>
         <div class="navigation__wrapper">
@@ -46,9 +46,9 @@
       </div>
       <div class="page-header__picture">
         <picture>
-          <source media="(min-width: 1248px)" srcset="img/pay-desktop.png 1x, img/pay-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/pay-tablet.png 1x, img/pay-tablet@2x.png 2x">
-          <img src="img/pay-mobile.png" srcset="img/pay-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата">
+          <source media="(min-width: 1248px)" data-srcset="img/pay-desktop.png 1x, img/pay-desktop@2x.png 2x" class="lazyload">
+          <source media="(min-width: 768px)" data-srcset="img/pay-tablet.png 1x, img/pay-tablet@2x.png 2x" class="lazyload">
+          <img data-src="img/pay-mobile.png" srcset="img/pay-mobile@2x.png 2x" width="294" height="220" alt="Печатная плата" class="lazyload">
         </picture>
       </div>
       <a class="page-header__scroll" onclick="$('#scroll').animatescroll({scrollSpeed:2000,easing:'easeOutCubic'});">Скролл вниз</a>
@@ -122,9 +122,9 @@
             <a href="#">
               <h3>Производство печатных плат</h3>
               <picture>
-                <source media="(min-width: 1024px)" srcset="img/production-desktop-1x.png 1x, img/production-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/production-tablet-1x.png 1x, img/production-tablet-2x.png 2x">
-                <img width="290" height="256" src="img/production-mobile-1x.png" srcset="img/production-mobile-2x.png 2x" alt="Производство печатных плат">
+                <source media="(min-width: 1024px)" data-srcset="img/production-desktop-1x.png 1x, img/production-desktop-2x.png 2x" class="lazyload">
+                <source media="(min-width: 768px)" data-srcset="img/production-tablet-1x.png 1x, img/production-tablet-2x.png 2x" class="lazyload">
+                <img width="290" height="256" src="img/production-mobile-1x.png" srcset="img/production-mobile-2x.png 2x" alt="Производство печатных плат" class="lazyload">
               </picture>
             </a>
           </li>
@@ -132,9 +132,9 @@
             <a href="#">
               <h3>Монтаж печатных плат</h3>
               <picture>
-                <source media="(min-width: 1024px)" srcset="img/mounting-desktop-1x.png 1x, img/mounting-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/mounting-tablet-1x.png 1x, img/mounting-tablet-2x.png 2x">
-                <img width="290" height="256" src="img/mounting-mobile-1x.png" srcset="img/mounting-mobile-2x.png 2x" alt="Монтаж печатных плат">
+                <source media="(min-width: 1024px)" data-srcset="img/mounting-desktop-1x.png 1x, img/mounting-desktop-2x.png 2x" class="lazyload">
+                <source media="(min-width: 768px)" data-srcset="img/mounting-tablet-1x.png 1x, img/mounting-tablet-2x.png 2x" class="lazyload">
+                <img width="290" height="256" data-src="img/mounting-mobile-1x.png" data-srcset="img/mounting-mobile-2x.png 2x" alt="Монтаж печатных плат" class="lazyload">
               </picture>
             </a>
           </li>
@@ -142,9 +142,9 @@
             <a href="#">
               <h3>Комплектующие для светотехники</h3>
               <picture>
-                <source media="(min-width: 1024px)" srcset="img/complete-desktop-1x.png 1x, img/complete-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/complete-tablet-1x.png 1x, img/complete-tablet-2x.png 2x">
-                <img width="290" height="256" src="img/complete-mobile-1x.png" srcset="img/complete-mobile-2x.png 2x" alt="Комплектующие для светотехники">
+                <source media="(min-width: 1024px)" data-srcset="img/complete-desktop-1x.png 1x, img/complete-desktop-2x.png 2x" class="lazyload">
+                <source media="(min-width: 768px)" data-srcset="img/complete-tablet-1x.png 1x, img/complete-tablet-2x.png 2x" class="lazyload">
+                <img width="290" height="256" data-src="img/complete-mobile-1x.png" data-srcset="img/complete-mobile-2x.png 2x" alt="Комплектующие для светотехники" class="lazyload">
               </picture>
             </a>
           </li>
@@ -193,23 +193,23 @@
       <div class="page-footer__container">
         <div class="page-footer__social social">
           <a class="social__logo">
-            <img width="216" height="52" src="img/logo-footer.svg" alt="Логотип Smart Device">
+            <img width="216" height="52" data-src="img/logo-footer.svg" alt="Логотип Smart Device" class="lazyload">
           </a>
           <span>1999-2018 SD Service Devices</span>
           <ul class="social__links">
             <li>
               <a>
-                <img width="27" height="27" src="img/facebook.svg" alt="Фейсбук">
+                <img width="27" height="27" data-src="img/facebook.svg" alt="Фейсбук" class="lazyload">
               </a>
             </li>
             <li>
               <a>
-                <img width="27" height="27" src="img/ok.svg" alt="Одноклассники">
+                <img width="27" height="27" data-src="img/ok.svg" alt="Одноклассники" class="lazyload">
               </a>
             </li>
             <li>
               <a>
-                <img width="27" height="27" src="img/vk.svg" alt="Вконтакте">
+                <img width="27" height="27" data-src="img/vk.svg" alt="Вконтакте" class="lazyload">
               </a>
             </li>
           </ul>
