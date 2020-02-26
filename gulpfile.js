@@ -1,3 +1,6 @@
+/* stylelint-disable*/
+/* eslint-disable*/
+
 "use strict";
 
 var gulp = require("gulp");
@@ -14,6 +17,13 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var minify = require('gulp-minify');
+
+gulp.task('compress', function() {
+  return gulp.src(["./source/js/main.js" ,"./source/js/vendor.js"])
+    .pipe(minify())
+    .pipe(gulp.dest('./source/js'))
+});
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -78,7 +88,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    "source/js/*-min.js",
     "source//*.ico"
   ], {
     base: "source"
@@ -90,5 +100,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "css", "sprite", "html", "images", "copy"));
+gulp.task("build", gulp.series("clean", "css", "sprite", "html", "images", "compress", "copy"));
+gulp.task("compress", gulp.series("compress"));
 gulp.task("start", gulp.series("build", "server"));
