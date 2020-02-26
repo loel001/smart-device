@@ -70,7 +70,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 112px;
 
   @include respond-above ($breakpoints-tablet) {
@@ -93,6 +92,10 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.social__links li:not(:nth-child(3n+3)) {
+  margin-right: 15px;
 }
 
 .social__links li:not(:last-child) {

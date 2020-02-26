@@ -72,7 +72,7 @@
 
   if (form) {
     form.addEventListener("submit", function (evt) {
-      if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || telephoneNumber.value.length == 0 || !appeal.value) {
+      if (!surname.value || telephoneNumber.value.length != 17  || !appeal.value) {
         evt.preventDefault();
         letterWrapper.classList.add('popup--error');
         setTimeout(function () {
