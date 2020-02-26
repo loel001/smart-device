@@ -2,7 +2,6 @@
 
 (function () {
   // accordion-footer
-
   const MOBILE_WIDTH = 768;
   const accordionTittle = document.querySelectorAll('.navigation-footer__wrapper h2');
   const modifiedAccordionIittle = Array.prototype.slice.call(accordionTittle);
@@ -36,19 +35,7 @@
     });
   }
 
-  // scroll
-  $('body').animatescroll();
-
-  // iMask
-
-  $(document).ready(function () {
-    $("#telephone").inputmask("+7 (999)-999-9999", {showMaskOnFocus: true});
-    $("#telephone-number").inputmask("+7 (999)-999-9999", {showMaskOnFocus: true});
-  });
-
   // Popup-desktop
-
-
   const letterButton = document.querySelector('.navigation__button');
   const popup = document.querySelector('.letter');
   const surname = document.getElementById('name');
@@ -88,7 +75,7 @@
       if (!surname.value || (telephoneNumber.value.indexOf("_") != -1) || telephoneNumber.value.length == 0 || !appeal.value) {
         evt.preventDefault();
         letterWrapper.classList.add('popup--error');
-        setTimeout(function() {
+        setTimeout(function () {
           letterWrapper.classList.remove('popup--error');
         }, 1000);
       } else {
@@ -110,5 +97,4 @@
       }
     }
   });
-
 })();
